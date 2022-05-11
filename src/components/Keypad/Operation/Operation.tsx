@@ -10,16 +10,13 @@ import {
 } from '../../../constants';
 import { calculatorAction } from '../../../reducers/calculatorReducer/calculatorReducer';
 import { historyAction } from '../../../reducers/historyReducer/historyReducer';
-import {
-  getCurrentValue,
-  getOperations,
-} from '../../../selectors/CalculatorSelector/CalculatorSelector';
+import { getCurrentValue } from '../../../selectors/CalculatorSelector/CalculatorSelector';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
+
+import Operand from './Operand/Operand';
 
 const Operation = (): ReturnComponentType => {
   const dispatch = useDispatch();
-
-  const operations = useSelector(getOperations);
 
   const currentValue = useSelector(getCurrentValue);
 
@@ -35,6 +32,19 @@ const Operation = (): ReturnComponentType => {
       }
     } else if (value === 'C') {
       dispatch(calculatorAction.NullifyValue());
+      // нужно фиксить будет
+    } else if (value === '.') {
+      if (
+        currentValue.includes('.') &&
+        !currentValue.includes('+') &&
+        !currentValue.includes('-') &&
+        !currentValue.includes('*') &&
+        !currentValue.includes('/')
+      )
+        dispatch(calculatorAction.addNewSymbol(currentValue));
+      else {
+        dispatch(calculatorAction.addNewSymbol(`${currentValue}.`));
+      }
     } else if (value === '=') {
       try {
         // eslint-disable-next-line no-eval
@@ -49,20 +59,7 @@ const Operation = (): ReturnComponentType => {
     }
   };
 
-  return (
-    <div>
-      {operations.map(operation => (
-        <button
-          type="button"
-          key={operation.value}
-          onClick={(e: any) => createOperation(e.target.value)}
-          value={operation.value}
-        >
-          {operation.value}
-        </button>
-      ))}
-    </div>
-  );
+  return <Operand createOperation={createOperation} />;
 };
 
 export default Operation;

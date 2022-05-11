@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 
 import { historyAction } from '../../reducers/historyReducer/historyReducer';
 import { getHistory } from '../../selectors/HistorySelectors/HistorySelectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
+
+const StyledHistory = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px;
+`;
+
+const StyledButton = styled.button`
+  background-color: #863232;
+`;
 
 const History = (): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -18,30 +31,34 @@ const History = (): ReturnComponentType => {
   };
 
   return (
-    <div>
+    <StyledHistory>
       {isDisplayHistory ? (
         <>
-          {historyWindow.length
-            ? 'operations history is shown below'
-            : 'operations history is empty'}
-          <ul>
-            {historyWindow.map(item => (
-              <li key={item.id}>{item.value}</li>
-            ))}
-          </ul>
-          <button type="button" onClick={clearHistory}>
-            clear history
-          </button>
-          <button type="button" onClick={() => setIsDisplayHistory(false)}>
-            hide history
-          </button>
+          <div>
+            <StyledButton type="button" onClick={clearHistory}>
+              clear history
+            </StyledButton>
+            <StyledButton type="button" onClick={() => setIsDisplayHistory(false)}>
+              hide history
+            </StyledButton>
+          </div>
+          <div>
+            {historyWindow.length
+              ? 'operations history is shown below'
+              : 'operations history is empty'}
+            <ul>
+              {historyWindow.map(item => (
+                <li key={item.id}>{item.value}</li>
+              ))}
+            </ul>
+          </div>
         </>
       ) : (
-        <button type="button" onClick={() => setIsDisplayHistory(true)}>
+        <StyledButton type="button" onClick={() => setIsDisplayHistory(true)}>
           show history
-        </button>
+        </StyledButton>
       )}
-    </div>
+    </StyledHistory>
   );
 };
 

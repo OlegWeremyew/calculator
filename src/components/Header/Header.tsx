@@ -4,10 +4,12 @@ import styled from 'styled-components';
 
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
+// @ts-ignore
+import calculator from './calculator.png';
 import Navbar from './Navbar/Navbar';
 
 const StyledHeader = styled.header`
-  height: 50px;
+  height: 60px;
   display: flex;
   padding: 10px;
   justify-content: space-between;
@@ -17,7 +19,7 @@ const StyledHeader = styled.header`
 
 const Header = (): ReturnComponentType => (
   <StyledHeader>
-    Header
+    <img src={calculator} alt="calculator" style={{ width: '55px', height: '55px' }} />
     <Navbar />
   </StyledHeader>
 );

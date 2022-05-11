@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
 
 import { EMPTY_STRING } from '../../../constants';
 import { calculatorAction } from '../../../reducers/calculatorReducer/calculatorReducer';
@@ -9,6 +10,29 @@ import {
   getCurrentValue,
 } from '../../../selectors/CalculatorSelector/CalculatorSelector';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
+
+const StyledKeypadButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #861f1f;
+`;
+const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #720000;
+  margin: 2px;
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: #9f2a2a;
+  }
+`;
 
 const KeypadButton = (): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -24,18 +48,18 @@ const KeypadButton = (): ReturnComponentType => {
     dispatch(calculatorAction.addNewSymbol(currentValue + value));
   };
   return (
-    <div>
+    <StyledKeypadButton>
       {buttons.map(button => (
-        <button
+        <StyledButton
           type="button"
           key={button.value}
           onClick={(e: any) => tapeNumber(e.target.value)}
           value={button.value}
         >
           {button.value}
-        </button>
+        </StyledButton>
       ))}
-    </div>
+    </StyledKeypadButton>
   );
 };
 
