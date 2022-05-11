@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 
 import { PATH } from '../../constants';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
+import History from '../History/History';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
 const Calculator = React.lazy(() => import('../../pages/Calculator/Calculator'));
@@ -16,6 +17,7 @@ const MainContent = (): ReturnComponentType => (
       <Route path={PATH.SETTINGS_PAGE_ROUTE} element={<Settings />} />
       <Route path={PATH.ERROR_PAGE_ROUTE} element={<PageNotFound />} />
     </Routes>
+    <History />
   </main>
 );
 

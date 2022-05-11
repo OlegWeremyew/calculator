@@ -1,5 +1,8 @@
+import { EMPTY_STRING } from '../../constants';
+import { InferActionTypes } from '../../store';
+
 export const CalculatorInitialValue: CalculatorInitialValueType = {
-  currentValue: '0',
+  currentValue: EMPTY_STRING,
   buttons: [
     { value: '0' },
     { value: '1' },
@@ -31,14 +34,65 @@ export type ButtonsType = {
 
 export const calculatorReducer = (
   state: CalculatorInitialValueType = CalculatorInitialValue,
-  action: any,
+  action: ActionCalculatorTypes,
 ): CalculatorInitialValueType => {
   switch (action.type) {
-    case '': {
-      return state;
+    case 'ADD_NEW_SYMBOL': {
+      return {
+        ...state,
+        currentValue: action.payload.value,
+      };
     }
-
+    case 'DELETE_LAST_SYMBOL': {
+      return {
+        ...state,
+        currentValue: action.payload.value,
+      };
+    }
+    case 'NULLIFY_VALUE': {
+      return {
+        ...state,
+        currentValue: EMPTY_STRING,
+      };
+    }
+    case 'SET_ERROR_VALUE': {
+      return {
+        ...state,
+        currentValue: 'Error',
+      };
+    }
     default:
       return state;
   }
 };
+
+export const calculatorAction = {
+  addNewSymbol(value: string) {
+    return {
+      type: 'ADD_NEW_SYMBOL',
+      payload: {
+        value,
+      },
+    } as const;
+  },
+  deleteLastSymbol(value: string) {
+    return {
+      type: 'DELETE_LAST_SYMBOL',
+      payload: {
+        value,
+      },
+    } as const;
+  },
+  NullifyValue() {
+    return {
+      type: 'NULLIFY_VALUE',
+    } as const;
+  },
+  setErrorValue() {
+    return {
+      type: 'SET_ERROR_VALUE',
+    } as const;
+  },
+};
+
+export type ActionCalculatorTypes = InferActionTypes<typeof calculatorAction>;
