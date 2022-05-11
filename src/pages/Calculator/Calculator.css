@@ -1,0 +1,12 @@
+.output {
+    margin-bottom: 1rem;
+}
+
+input {
+    text-align: right;
+}
+
+button {
+    margin: 2px;
+    width: 2rem;
+}
