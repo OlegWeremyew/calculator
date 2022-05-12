@@ -15,16 +15,17 @@ export const GlobalStyles = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
-  
+
   a {
     text-decoration: none;
     color: white;
+
     &:hover {
       text-decoration: underline;
       color: darkred;
     }
   }
-  
+
   body {
     & > #root {
       width: 100%;
@@ -41,6 +42,6 @@ export const GlobalStyles = createGlobalStyle`
   #root {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom, rgba(224, 196, 204, 0.85), #e5c890);
+    background: linear-gradient(to bottom, rgba(224, 196, 204, 0.85), #f1c87c);
   }
 `;

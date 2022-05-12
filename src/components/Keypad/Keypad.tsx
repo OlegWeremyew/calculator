@@ -12,7 +12,11 @@ const StyledKeypad = styled.div`
   flex-direction: column;
   width: 420px;
   align-items: center;
-  background-color: #b61919;
+
+  @media ${({ theme }: any) => theme.media.phone} {
+    width: 310px;
+    background-color: #730bc4;
+  }
 `;
 
 const Keypad = (): ReturnComponentType => (

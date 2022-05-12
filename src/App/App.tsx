@@ -9,8 +9,6 @@ import { ReturnComponentType } from '../types/ReturnComponentType';
 const AppWrapper = styled.div`
   width: 1200px;
   min-height: 100vh;
-  background: ${(props: any) => props.theme.backgrounds.primary};
-  color: ${(props: any) => props.theme.colors.primary};
 `;
 
 const App = (): ReturnComponentType => (

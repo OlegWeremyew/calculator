@@ -10,17 +10,31 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 const StyledCalculator = styled.div`
   display: flex;
   justify-content: center;
-  width: 800px;
+  width: 100%;
+  height: 100%;
   padding: 10px;
-  background-color: #bea4a4;
+
+  @media ${({ theme }: any) => theme.media.tablet} {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media ${({ theme }: any) => theme.media.phone} {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const StyledDiv = styled.div`
+  border: ${({ theme }: any) => theme.borders.primary} 2px solid;
+  min-width: 200px;
 `;
 
 const Calculator = (): ReturnComponentType => (
   <StyledCalculator>
-    <div>
+    <StyledDiv>
       <Display />
       <Keypad />
-    </div>
+    </StyledDiv>
     <div>
       <History />
     </div>

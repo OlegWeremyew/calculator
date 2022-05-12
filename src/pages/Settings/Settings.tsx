@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import SuperSelect from '../../common/SuperSelect/SuperSelect';
+import SuperSelect from '../../components/SuperSelect/SuperSelect';
 import { changeThemeAC, ThemeType } from '../../reducers/themeReducer/themeReducer.ts';
 import { AppRootStateType } from '../../store';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
@@ -10,7 +10,7 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 // @ts-ignore
 import style from './Settings.module.css';
 
-const themes = ['white', 'dark', 'red'];
+const themes = ['white', 'dark', 'light-brown'];
 
 const Settings = (): ReturnComponentType => {
   const theme = useSelector<AppRootStateType, ThemeType>(state => state.them.theme);

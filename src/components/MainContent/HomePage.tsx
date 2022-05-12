@@ -10,6 +10,8 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 const StyledMainContent = styled.main`
   display: flex;
   justify-content: center;
+  background: ${({ theme }: any) => theme.backgrounds.primary};
+  color: ${({ theme }: any) => theme.colors.primary};
 `;
 
 const Calculator = React.lazy(() => import('../../pages/Calculator/Calculator'));

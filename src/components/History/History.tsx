@@ -1,28 +1,42 @@
 import React, { useState } from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
 import { historyAction } from '../../reducers/historyReducer/historyReducer';
-import { getHistory } from '../../selectors/HistorySelectors/HistorySelectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
+import HistoryButton from './HistoryButton/HistoryButton';
+import HistoryList from './HistoryList/HistoryList';
+
 const StyledHistory = styled.div`
+  font-size: 20px;
+  padding: 10px 10px 10px 20px;
+  margin-left: 20px;
+  width: 320px;
+  border: ${({ theme }: any) => theme.borders.primary} 2px solid;
+
+  @media ${({ theme }: any) => theme.media.tablet} {
+    width: 420px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  @media ${({ theme }: any) => theme.media.phone} {
+    width: 314px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+`;
+
+const ControlBlock = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 20px;
-  padding: 10px;
-`;
-
-const StyledButton = styled.button`
-  background-color: #863232;
 `;
 
 const History = (): ReturnComponentType => {
   const dispatch = useDispatch();
-
-  const historyWindow = useSelector(getHistory);
 
   const [isDisplayHistory, setIsDisplayHistory] = useState<boolean>(true);
 
@@ -33,30 +47,21 @@ const History = (): ReturnComponentType => {
   return (
     <StyledHistory>
       {isDisplayHistory ? (
-        <>
+        <ControlBlock>
           <div>
-            <StyledButton type="button" onClick={clearHistory}>
-              clear history
-            </StyledButton>
-            <StyledButton type="button" onClick={() => setIsDisplayHistory(false)}>
+            <HistoryButton callback={clearHistory}>clear history</HistoryButton>
+            <HistoryButton callback={() => setIsDisplayHistory(false)}>
               hide history
-            </StyledButton>
+            </HistoryButton>
           </div>
-          <div>
-            {historyWindow.length
-              ? 'operations history is shown below'
-              : 'operations history is empty'}
-            <ul>
-              {historyWindow.map(item => (
-                <li key={item.id}>{item.value}</li>
-              ))}
-            </ul>
-          </div>
-        </>
+          <HistoryList />
+        </ControlBlock>
       ) : (
-        <StyledButton type="button" onClick={() => setIsDisplayHistory(true)}>
-          show history
-        </StyledButton>
+        <ControlBlock>
+          <HistoryButton callback={() => setIsDisplayHistory(true)}>
+            show history
+          </HistoryButton>
+        </ControlBlock>
       )}
     </StyledHistory>
   );

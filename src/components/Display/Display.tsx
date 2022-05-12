@@ -7,20 +7,25 @@ import { getCurrentValue } from '../../selectors/CalculatorSelector/CalculatorSe
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 const StyledDisplay = styled.div`
-  min-width: 200px;
+  max-width: 420px;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: rgba(57, 139, 203, 0.87);
+  background-color: rgba(163, 201, 224, 0.87);
   font-size: 30px;
+  border-bottom: ${({ theme }: any) => theme.borders.primary} 2px solid;
+
+  @media ${({ theme }: any) => theme.media.phone} {
+    width: 310px;
+  }
 `;
 
 const Display = (): ReturnComponentType => {
   const currentValue = useSelector(getCurrentValue);
 
-  return <StyledDisplay>{currentValue || 'lets start'}</StyledDisplay>;
+  return <StyledDisplay>{currentValue || 'lets start 🖩'}</StyledDisplay>;
 };
 
 export default Display;

@@ -17,7 +17,7 @@ const StyledKeypadButton = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #861f1f;
+  background: ${({ theme }: any): string => theme.backgrounds.primary};
 `;
 const StyledButton = styled.button`
   display: flex;
@@ -25,12 +25,22 @@ const StyledButton = styled.button`
   justify-content: center;
   width: 100px;
   height: 100px;
-  background-color: #720000;
+  background: ${({ theme }: any) => theme.buttonsBgc.primary};
+  color: ${({ theme }: any) => theme.colors.primary};
   margin: 2px;
-  font-size: 30px;
+  font-size: 40px;
   cursor: pointer;
+  border-radius: 5px;
+  border: ${({ theme }: any) => theme.borders.primary} 3px solid;
+
   &:hover {
-    background-color: #9f2a2a;
+    background-color: #e8d0af;
+  }
+
+  @media ${({ theme }: any) => theme.media.phone} {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
   }
 `;
 
