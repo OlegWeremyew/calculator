@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Display from '../../components/Display/Display';
 import History from '../../components/History/History';
 import Keypad from '../../components/Keypad/Keypad';
+import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 const StyledCalculator = styled.div`
@@ -14,18 +15,14 @@ const StyledCalculator = styled.div`
   height: 100%;
   padding: 10px;
 
-  @media ${({ theme }: any) => theme.media.tablet} {
-    flex-direction: column;
-    align-items: center;
-  }
-  @media ${({ theme }: any) => theme.media.phone} {
+  @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
   }
 `;
 
 const StyledDiv = styled.div`
-  border: ${({ theme }: any) => theme.borders.primary} 2px solid;
+  border: ${({ theme }: ThemeType) => theme.border} 2px solid;
   min-width: 200px;
 `;
 

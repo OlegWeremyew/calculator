@@ -13,7 +13,7 @@ const StyledKeypad = styled.div`
   width: 420px;
   align-items: center;
 
-  @media ${({ theme }: any) => theme.media.phone} {
+  @media (max-width: 445px) {
     width: 310px;
     background-color: #730bc4;
   }

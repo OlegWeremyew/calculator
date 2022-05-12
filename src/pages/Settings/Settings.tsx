@@ -1,28 +1,26 @@
 import React from 'react';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import SuperSelect from '../../components/SuperSelect/SuperSelect';
-import { changeThemeAC, ThemeType } from '../../reducers/themeReducer/themeReducer.ts';
-import { AppRootStateType } from '../../store';
+import {
+  changeThemeAC,
+  MainThemeType,
+} from '../../reducers/themeReducer/themeReducer.ts';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-// @ts-ignore
-import style from './Settings.module.css';
-
-const themes = ['white', 'dark', 'light-brown'];
+const themes = ['light', 'dark', 'light-brown'];
 
 const Settings = (): ReturnComponentType => {
-  const theme = useSelector<AppRootStateType, ThemeType>(state => state.them.theme);
   const dispatch = useDispatch();
-  const onChangeOption = (color: ThemeType): void => {
+  const onChangeOption = (color: MainThemeType): void => {
     dispatch(changeThemeAC(color));
   };
 
   return (
-    <div className={style[theme]}>
-      <div className={style.main}>
-        <span className={style[`${theme}-text`]}>Color them</span>
+    <div>
+      <div>
+        <span>Color them</span>
         <div>
           <SuperSelect options={themes} onChangeOption={onChangeOption} />
         </div>

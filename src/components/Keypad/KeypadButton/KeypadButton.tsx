@@ -9,6 +9,7 @@ import {
   getButtons,
   getCurrentValue,
 } from '../../../selectors/CalculatorSelector/CalculatorSelector';
+import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 const StyledKeypadButton = styled.div`
@@ -17,7 +18,7 @@ const StyledKeypadButton = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  background: ${({ theme }: any): string => theme.backgrounds.primary};
+  background: ${({ theme }: ThemeType): string => theme.background};
 `;
 const StyledButton = styled.button`
   display: flex;
@@ -25,19 +26,24 @@ const StyledButton = styled.button`
   justify-content: center;
   width: 100px;
   height: 100px;
-  background: ${({ theme }: any) => theme.buttonsBgc.primary};
-  color: ${({ theme }: any) => theme.colors.primary};
+  background: ${({ theme }: ThemeType) => theme.buttonsBgc};
+  color: ${({ theme }: ThemeType) => theme.color};
   margin: 2px;
   font-size: 40px;
   cursor: pointer;
   border-radius: 5px;
-  border: ${({ theme }: any) => theme.borders.primary} 3px solid;
+  border: ${({ theme }: ThemeType) => theme.border} 3px solid;
 
   &:hover {
-    background-color: #e8d0af;
+    background: ${({ theme }: ThemeType) => theme.hoverBgc};
+    border: outset 4px ${({ theme }: ThemeType) => theme.hoverBgc};
   }
 
-  @media ${({ theme }: any) => theme.media.phone} {
+  &:active {
+    border: inset 4px ${({ theme }: ThemeType) => theme.hoverBgc};
+  }
+
+  @media (max-width: 445px) {
     width: 70px;
     height: 70px;
     font-size: 30px;

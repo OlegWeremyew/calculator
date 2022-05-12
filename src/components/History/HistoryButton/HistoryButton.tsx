@@ -2,19 +2,27 @@ import React from 'react';
 
 import styled from 'styled-components';
 
+import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 const StyledButton = styled.button`
   width: 120px;
-  height: 30px;
-  background: ${({ theme }: any) => theme.backgrounds.primary};
+  height: 40px;
+  background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   cursor: pointer;
   margin-left: 3px;
-  border: ${({ theme }: any) => theme.borders.primary} 2px solid;
+  font-size: 18px;
+  border: ${({ theme }: ThemeType) => theme.border} 2px solid;
   border-radius: 5px;
+  color: ${({ theme }: ThemeType) => theme.color};
 
   &:hover {
-    background-color: #e8d0af;
+    background: ${({ theme }: ThemeType) => theme.hoverBgc};
+    border: outset 3px ${({ theme }: ThemeType) => theme.border};
+  }
+
+  &:active {
+    border: inset 3px ${({ theme }: ThemeType) => theme.border};
   }
 `;
 

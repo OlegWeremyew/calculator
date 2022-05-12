@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
 import { historyAction } from '../../reducers/historyReducer/historyReducer';
+import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import HistoryButton from './HistoryButton/HistoryButton';
@@ -14,15 +15,15 @@ const StyledHistory = styled.div`
   padding: 10px 10px 10px 20px;
   margin-left: 20px;
   width: 320px;
-  border: ${({ theme }: any) => theme.borders.primary} 2px solid;
+  border: ${({ theme }: ThemeType) => theme.border} 2px solid;
 
-  @media ${({ theme }: any) => theme.media.tablet} {
+  @media (max-width: 800px) {
     width: 420px;
     margin-left: 0;
     margin-top: 10px;
   }
 
-  @media ${({ theme }: any) => theme.media.phone} {
+  @media (max-width: 445px) {
     width: 314px;
     margin-left: 0;
     margin-top: 10px;

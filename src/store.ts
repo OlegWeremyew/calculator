@@ -9,7 +9,7 @@ export type AppRootStateType = ReturnType<typeof rootReducer>;
 const rootReducer = combineReducers({
   calculator: calculatorReducer,
   history: historyReducer,
-  them: themeReducer,
+  theme: themeReducer,
 });
 
 export const store = createStore(rootReducer);

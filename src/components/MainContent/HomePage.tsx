@@ -4,14 +4,15 @@ import { Routes, Route } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { PATH } from '../../constants';
+import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 import PageNotFound from '../PageNotFound/PageNotFound';
 
 const StyledMainContent = styled.main`
   display: flex;
   justify-content: center;
-  background: ${({ theme }: any) => theme.backgrounds.primary};
-  color: ${({ theme }: any) => theme.colors.primary};
+  background: ${({ theme }: ThemeType) => theme.background};
+  color: ${({ theme }: ThemeType) => theme.color};
 `;
 
 const Calculator = React.lazy(() => import('../../pages/Calculator/Calculator'));

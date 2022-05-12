@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { PATH } from '../../../constants';
+import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 const StyledNavbar = styled.nav`
@@ -11,6 +12,8 @@ const StyledNavbar = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 150px;
+  margin-right: 10px;
+  color: ${({ theme }: ThemeType) => theme.color};
 `;
 
 const Navbar = (): ReturnComponentType => (

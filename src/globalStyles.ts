@@ -1,14 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
-import { theme } from './theme';
-
 export const GlobalStyles = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    font-family: ${theme.fonts.primary};
+    font-family: 'sans-serif';
   }
 
   html, body {
@@ -18,11 +16,15 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: white;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 400;
 
     &:hover {
       text-decoration: underline;
-      color: darkred;
+      color: inherit;
+      opacity: 0.7;
+      font-weight: 500;
     }
   }
 
@@ -42,6 +44,5 @@ export const GlobalStyles = createGlobalStyle`
   #root {
     display: flex;
     justify-content: center;
-    background: linear-gradient(to bottom, rgba(224, 196, 204, 0.85), #f1c87c);
   }
 `;

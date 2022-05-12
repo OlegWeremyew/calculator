@@ -1,7 +1,7 @@
 const CHANGE_THEME = 'CHANGE_THEME';
-export type ThemeType = 'dark' | 'green' | 'light';
+export type MainThemeType = 'dark' | 'light-brown' | 'light';
 const initialThemeState = {
-  theme: 'light' as ThemeType,
+  theme: 'light' as MainThemeType,
 };
 
 type initStateThemeType = typeof initialThemeState;
@@ -20,7 +20,7 @@ export const themeReducer = (
 };
 
 export type changeThemeActionType = ReturnType<typeof changeThemeAC>;
-export const changeThemeAC = (theme: ThemeType) =>
+export const changeThemeAC = (theme: MainThemeType) =>
   ({
     type: CHANGE_THEME,
     payload: { theme },

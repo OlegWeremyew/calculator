@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import { getOperations } from '../../../../selectors/CalculatorSelector/CalculatorSelector';
+import { ThemeType } from '../../../../theme';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 const StyledOperand = styled.div`
@@ -11,7 +12,7 @@ const StyledOperand = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: ${({ theme }: any) => theme.backgrounds.primary};
+  background: ${({ theme }: ThemeType) => theme.background};
 `;
 const StyledButton = styled.button`
   display: flex;
@@ -19,21 +20,27 @@ const StyledButton = styled.button`
   justify-content: center;
   width: 100px;
   height: 100px;
-  background: ${({ theme }: any) => theme.buttonsBgc.primary};
+  background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   margin: 2px;
   font-size: 40px;
   cursor: pointer;
+  color: ${({ theme }: ThemeType) => theme.color};
   border-radius: 5px;
-  border: ${({ theme }: any) => theme.borders.primary} 3px solid;
+  border: ${({ theme }: ThemeType) => theme.border} 3px solid;
 
-  @media ${({ theme }: any) => theme.media.phone} {
+  @media (max-width: 445px) {
     width: 70px;
     height: 70px;
     font-size: 30px;
   }
 
   &:hover {
-    background-color: #e8d0af;
+    background: ${({ theme }: ThemeType) => theme.hoverBgc};
+    border: outset 4px ${({ theme }: ThemeType) => theme.border};
+  }
+
+  &:active {
+    border: inset 4px ${({ theme }: ThemeType) => theme.border};
   }
 `;
 
