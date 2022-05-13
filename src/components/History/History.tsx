@@ -1,21 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
-import { historyAction } from '../../reducers/historyReducer/historyReducer';
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-import HistoryButton from './HistoryButton/HistoryButton';
 import HistoryList from './HistoryList/HistoryList';
 
 const StyledHistory = styled.div`
   font-size: 20px;
-  padding: 10px 10px 10px 20px;
-  margin-left: 20px;
+  padding: 10px;
+  margin-left: 15px;
   width: 320px;
-  border: ${({ theme }: ThemeType) => theme.border} 2px solid;
+  margin-top: 10px;
+  border: ${({ theme }: ThemeType) => theme.border} 3px solid;
 
   @media (max-width: 800px) {
     width: 420px;
@@ -30,42 +28,17 @@ const StyledHistory = styled.div`
   }
 `;
 
-const ControlBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Title = styled.h1`
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 10px 0;
 `;
 
-const History = (): ReturnComponentType => {
-  const dispatch = useDispatch();
-
-  const [isDisplayHistory, setIsDisplayHistory] = useState<boolean>(true);
-
-  const clearHistory = (): void => {
-    dispatch(historyAction.clearHistory());
-  };
-
-  return (
-    <StyledHistory>
-      {isDisplayHistory ? (
-        <ControlBlock>
-          <div>
-            <HistoryButton callback={clearHistory}>clear history</HistoryButton>
-            <HistoryButton callback={() => setIsDisplayHistory(false)}>
-              hide history
-            </HistoryButton>
-          </div>
-          <HistoryList />
-        </ControlBlock>
-      ) : (
-        <ControlBlock>
-          <HistoryButton callback={() => setIsDisplayHistory(true)}>
-            show history
-          </HistoryButton>
-        </ControlBlock>
-      )}
-    </StyledHistory>
-  );
-};
+const History = (): ReturnComponentType => (
+  <StyledHistory>
+    <Title>History</Title>
+    <HistoryList />
+  </StyledHistory>
+);
 
 export default History;

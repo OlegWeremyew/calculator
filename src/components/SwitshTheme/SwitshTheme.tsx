@@ -12,7 +12,7 @@ type SuperSelectPropsType = DefaultSelectPropsType & {
   onChangeOption: (option: any) => void;
 };
 
-const SuperSelect: React.FC<SuperSelectPropsType> = ({
+const SwitshTheme: React.FC<SuperSelectPropsType> = ({
   options,
   onChange,
   onChangeOption,
@@ -40,4 +40,4 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
   );
 };
 
-export default SuperSelect;
+export default SwitshTheme;

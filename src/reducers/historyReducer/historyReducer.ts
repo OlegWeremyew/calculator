@@ -2,10 +2,12 @@ import { InferActionTypes } from '../../store';
 
 export const HistoryInitialValue: HistoryInitialValueType = {
   historyWindow: [] as HistoryType[],
+  isShowHistory: true,
 };
 
 export type HistoryInitialValueType = {
   historyWindow: HistoryType[];
+  isShowHistory: boolean;
 };
 
 export type HistoryType = {
@@ -33,6 +35,12 @@ export const historyReducer = (
         historyWindow: [],
       };
     }
+    case 'SET_HISTORY_BLOCK_VISIBILITY': {
+      return {
+        ...state,
+        isShowHistory: action.payload.status,
+      };
+    }
     default:
       return state;
   }
@@ -50,6 +58,14 @@ export const historyAction = {
   clearHistory() {
     return {
       type: 'CLEAR_HISTORY',
+    } as const;
+  },
+  setHistoryBlockVisibility(status: boolean) {
+    return {
+      type: 'SET_HISTORY_BLOCK_VISIBILITY',
+      payload: {
+        status,
+      },
     } as const;
   },
 };

@@ -7,7 +7,13 @@ import Header from '../components/Header/Header';
 import Loader from '../components/Loader/Loader';
 import MainContent from '../components/MainContent/HomePage';
 import { getThemeValue } from '../selectors/ThemeSelector/ThemeSelector';
-import { themeDark, themeLight, themeLightBrown } from '../theme';
+import {
+  themeCrimson,
+  themeDark,
+  themeHeavenly,
+  themeLight,
+  themeLightBrown,
+} from '../theme';
 import { ReturnComponentType } from '../types/ReturnComponentType';
 
 const AppWrapper = styled.div`
@@ -19,15 +25,11 @@ const App = (): ReturnComponentType => {
   const themeValue = useSelector(getThemeValue);
   let themeStyle: any;
 
-  if (themeValue === 'light') {
-    themeStyle = themeLight;
-  }
-  if (themeValue === 'dark') {
-    themeStyle = themeDark;
-  }
-  if (themeValue === 'light-brown') {
-    themeStyle = themeLightBrown;
-  }
+  if (themeValue === 'light') themeStyle = themeLight;
+  if (themeValue === 'dark') themeStyle = themeDark;
+  if (themeValue === 'light-brown') themeStyle = themeLightBrown;
+  if (themeValue === 'heavenly') themeStyle = themeHeavenly;
+  if (themeValue === 'crimson') themeStyle = themeCrimson;
 
   return (
     <React.Suspense fallback={<Loader />}>

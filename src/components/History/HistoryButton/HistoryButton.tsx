@@ -6,15 +6,19 @@ import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 const StyledButton = styled.button`
-  width: 120px;
-  height: 40px;
+  width: 140px;
+  height: 45px;
   background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   cursor: pointer;
-  margin-left: 3px;
+  margin-left: 6px;
   font-size: 18px;
-  border: ${({ theme }: ThemeType) => theme.border} 2px solid;
+  border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   border-radius: 5px;
   color: ${({ theme }: ThemeType) => theme.color};
+
+  &:first-child {
+    margin-left: 0;
+  }
 
   &:hover {
     background: ${({ theme }: ThemeType) => theme.hoverBgc};

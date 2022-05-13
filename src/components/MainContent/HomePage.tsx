@@ -6,17 +6,19 @@ import styled from 'styled-components';
 import { PATH } from '../../constants';
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
-import PageNotFound from '../PageNotFound/PageNotFound';
 
 const StyledMainContent = styled.main`
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
   background: ${({ theme }: ThemeType) => theme.background};
   color: ${({ theme }: ThemeType) => theme.color};
 `;
 
 const Calculator = React.lazy(() => import('../../pages/Calculator/Calculator'));
 const Settings = React.lazy(() => import('../../pages/Settings/Settings'));
+const PageNotFound = React.lazy(() => import('../../pages/PageNotFound/PageNotFound'));
 
 const MainContent = (): ReturnComponentType => (
   <StyledMainContent>

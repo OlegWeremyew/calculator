@@ -1,5 +1,5 @@
 const CHANGE_THEME = 'CHANGE_THEME';
-export type MainThemeType = 'dark' | 'light-brown' | 'light';
+export type MainThemeType = 'dark' | 'light-brown' | 'light' | 'heavenly' | 'crimson';
 const initialThemeState = {
   theme: 'light' as MainThemeType,
 };

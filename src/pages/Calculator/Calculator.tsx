@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Display from '../../components/Display/Display';
-import History from '../../components/History/History';
 import Keypad from '../../components/Keypad/Keypad';
+import Panel from '../../components/Panel/Panel';
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
@@ -12,7 +12,6 @@ const StyledCalculator = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
   padding: 10px;
 
   @media (max-width: 800px) {
@@ -22,8 +21,13 @@ const StyledCalculator = styled.div`
 `;
 
 const StyledDiv = styled.div`
-  border: ${({ theme }: ThemeType) => theme.border} 2px solid;
+  border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   min-width: 200px;
+  height: 608px;
+
+  @media (max-width: 445px) {
+    height: 457px;
+  }
 `;
 
 const Calculator = (): ReturnComponentType => (
@@ -33,7 +37,7 @@ const Calculator = (): ReturnComponentType => (
       <Keypad />
     </StyledDiv>
     <div>
-      <History />
+      <Panel />
     </div>
   </StyledCalculator>
 );

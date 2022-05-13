@@ -18,6 +18,3 @@ export type PropertiesTypes<T> = T extends { [key: string]: infer U } ? U : neve
 
 export type InferActionTypes<T extends { [key: string]: (...args: any[]) => any }> =
   ReturnType<PropertiesTypes<T>>;
-
-// @ts-ignore
-window.store = store;

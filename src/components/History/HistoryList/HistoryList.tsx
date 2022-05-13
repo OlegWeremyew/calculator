@@ -8,6 +8,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 const StyledHistoryList = styled.div`
   padding-left: 10px;
+  margin-left: 10px;
 `;
 
 const Title = styled.div`
@@ -26,8 +27,8 @@ const HistoryList = (): ReturnComponentType => {
           : 'Operations history is empty'}
       </Title>
       <ol>
-        {historyWindow.map(item => (
-          <li key={item.id}>{item.value}</li>
+        {historyWindow.map(historyItem => (
+          <li key={historyItem.id}>{historyItem.value}</li>
         ))}
       </ol>
     </StyledHistoryList>

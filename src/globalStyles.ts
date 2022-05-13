@@ -22,10 +22,14 @@ export const GlobalStyles = createGlobalStyle`
 
     &:hover {
       text-decoration: underline;
-      color: inherit;
-      opacity: 0.7;
+      opacity: 0.8;
       font-weight: 500;
     }
+
+    &:focus {
+      font-weight: 700;
+    }
+    
   }
 
   body {

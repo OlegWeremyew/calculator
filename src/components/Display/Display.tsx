@@ -14,9 +14,10 @@ const StyledDisplay = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: rgba(163, 201, 224, 0.87);
+  background: ${({ theme }: ThemeType) => theme.displayBgc};
   font-size: 30px;
-  border-bottom: ${({ theme }: ThemeType) => theme.border} 2px solid;
+  margin-bottom: 1px;
+  border-bottom: ${({ theme }: ThemeType) => theme.border} 3px solid;
 
   @media (max-width: 445px) {
     width: 310px;

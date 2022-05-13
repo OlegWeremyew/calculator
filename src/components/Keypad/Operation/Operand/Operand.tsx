@@ -36,11 +36,11 @@ const StyledButton = styled.button`
 
   &:hover {
     background: ${({ theme }: ThemeType) => theme.hoverBgc};
-    border: outset 4px ${({ theme }: ThemeType) => theme.border};
+    border: outset 4px ${({ theme }: ThemeType) => theme.hoverBgc};
   }
 
   &:active {
-    border: inset 4px ${({ theme }: ThemeType) => theme.border};
+    border: inset 4px ${({ theme }: ThemeType) => theme.hoverBgc};
   }
 `;
 
