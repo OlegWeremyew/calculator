@@ -1,3 +1,5 @@
+import { InferActionTypes } from '../../store';
+
 const CHANGE_THEME = 'CHANGE_THEME';
 export type MainThemeType = 'dark' | 'light-brown' | 'light' | 'heavenly' | 'crimson';
 const initialThemeState = {
@@ -8,7 +10,7 @@ type initStateThemeType = typeof initialThemeState;
 
 export const themeReducer = (
   state: initStateThemeType = initialThemeState,
-  action: changeThemeActionType,
+  action: ActionThemeTypes,
 ): initStateThemeType => {
   switch (action.type) {
     case CHANGE_THEME: {
@@ -19,9 +21,15 @@ export const themeReducer = (
   }
 };
 
-export type changeThemeActionType = ReturnType<typeof changeThemeAC>;
-export const changeThemeAC = (theme: MainThemeType) =>
-  ({
-    type: CHANGE_THEME,
-    payload: { theme },
-  } as const);
+export const themeActions = {
+  changeThemeAC(theme: MainThemeType) {
+    return {
+      type: CHANGE_THEME,
+      payload: {
+        theme,
+      },
+    } as const;
+  },
+};
+
+export type ActionThemeTypes = InferActionTypes<typeof themeActions>;

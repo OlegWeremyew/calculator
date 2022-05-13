@@ -3,10 +3,10 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import { historyAction } from '../../reducers/historyReducer/historyReducer';
-import { getIsShowHistoryValue } from '../../selectors/HistorySelectors/HistorySelectors';
-import { ThemeType } from '../../theme';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
+import { historyAction } from '../../../reducers/historyReducer/historyReducer';
+import { getIsShowHistoryValue } from '../../../selectors/HistorySelectors/HistorySelectors';
+import { ThemeType } from '../../../theme';
+import { ReturnComponentType } from '../../../types/ReturnComponentType';
 import HistoryButton from '../History/HistoryButton/HistoryButton';
 
 const StyledHistory = styled.div`

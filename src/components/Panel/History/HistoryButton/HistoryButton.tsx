@@ -2,8 +2,8 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import { ThemeType } from '../../../theme';
-import { ReturnComponentType } from '../../../types/ReturnComponentType';
+import { ThemeType } from '../../../../theme';
+import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 const StyledButton = styled.button`
   width: 140px;
