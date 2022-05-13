@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { historyAction } from '../reducers';
 import { HistoryType } from '../reducers/historyReducer/types';
-import { getHistory } from '../selectors/HistorySelectors/HistorySelectors';
+import { getHistory } from '../selectors';
 
 export const getHistoryList = (): HistoryType[] => {
   const dispatch = useDispatch();

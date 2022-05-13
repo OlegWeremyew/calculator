@@ -1,9 +1,4 @@
-import React, {
-  SelectHTMLAttributes,
-  DetailedHTMLProps,
-  ChangeEvent,
-  useCallback,
-} from 'react';
+import React, { ChangeEvent, useCallback } from 'react';
 
 import { useDispatch } from 'react-redux';
 
@@ -13,6 +8,7 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { Container, Title } from './components';
 import SwitchSelect from './SwitchSelect/SwitchSelect';
+import { DefaultSelectType } from './types';
 
 const SwitchTheme: React.FC<DefaultSelectType> = ({ onChange }): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -32,8 +28,3 @@ const SwitchTheme: React.FC<DefaultSelectType> = ({ onChange }): ReturnComponent
 };
 
 export default SwitchTheme;
-
-type DefaultSelectType = DetailedHTMLProps<
-  SelectHTMLAttributes<HTMLSelectElement>,
-  HTMLSelectElement
->;

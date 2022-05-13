@@ -3,8 +3,9 @@ import React from 'react';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 import { StyledButton } from './components';
+import { HistoryButtonType } from './types';
 
-const HistoryButton: React.FC<HistoryButtonType> = ({
+export const HistoryButton: React.FC<HistoryButtonType> = ({
   children,
   callback,
 }): ReturnComponentType => (
@@ -12,10 +13,3 @@ const HistoryButton: React.FC<HistoryButtonType> = ({
     {children}
   </StyledButton>
 );
-
-export default HistoryButton;
-
-export type HistoryButtonType = {
-  children: string;
-  callback: () => void;
-};

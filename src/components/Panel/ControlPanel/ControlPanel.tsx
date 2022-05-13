@@ -3,11 +3,11 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { historyAction } from '../../../reducers';
-import { getIsShowHistoryValue } from '../../../selectors/HistorySelectors/HistorySelectors';
+import { getIsShowHistoryValue } from '../../../selectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import { ControlBlock, HistoryContainer, Title } from './components';
-import HistoryButton from './HistoryButton/HistoryButton';
+import { HistoryButton } from './HistoryButton';
 
 const ControlPanel = (): ReturnComponentType => {
   const dispatch = useDispatch();

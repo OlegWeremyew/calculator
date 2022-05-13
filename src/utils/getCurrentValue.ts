@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { calculatorAction } from '../reducers';
-import { getCurrentValue } from '../selectors/CalculatorSelector/CalculatorSelector';
+import { getCurrentValue } from '../selectors';
 
 export const getCurrentValueFromLocalStorage = (): string => {
   const dispatch = useDispatch();

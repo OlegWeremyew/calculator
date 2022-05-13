@@ -7,6 +7,7 @@ import { getOperations } from '../../../../selectors';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 import { OperandContainer } from './components';
+import { OperationType } from './types';
 
 const Operand: React.FC<OperationType> = ({ createOperation }): ReturnComponentType => {
   const operations = useSelector(getOperations);
@@ -28,9 +29,3 @@ const Operand: React.FC<OperationType> = ({ createOperation }): ReturnComponentT
 };
 
 export default Operand;
-
-// types
-
-export type OperationType = {
-  createOperation(value: string): void;
-};

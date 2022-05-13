@@ -3,10 +3,10 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import { historyAction } from '../../../../../reducers';
-import { HistoryType } from '../../../../../reducers/historyReducer/types';
 import { ReturnComponentType } from '../../../../../types/ReturnComponentType';
 
 import { HistoryButton, HistoryItemContainer } from './components';
+import { HistoryItemType } from './types';
 
 const HistoryItem: React.FC<HistoryItemType> = ({
   historyWindow,
@@ -35,7 +35,3 @@ const HistoryItem: React.FC<HistoryItemType> = ({
 };
 
 export default HistoryItem;
-
-export type HistoryItemType = {
-  historyWindow: HistoryType[];
-};
