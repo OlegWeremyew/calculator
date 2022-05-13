@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import { getIsShowHistoryValue } from '../../selectors/HistorySelectors/HistorySelectors';
+import { getIsShowHistoryValue } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { PanelContainer } from './components';

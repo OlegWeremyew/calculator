@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { calculatorAction } from '../reducers/calculatorReducer/calculatorReducer';
+import { calculatorAction } from '../reducers';
 import { getCurrentValue } from '../selectors/CalculatorSelector/CalculatorSelector';
 
 export const getCurrentValueFromLocalStorage = (): string => {

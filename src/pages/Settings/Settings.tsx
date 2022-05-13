@@ -4,11 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import SettingsButton from '../../components/SettingsButton/SettingsButton';
 import SwitchTheme from '../../components/SwitchTheme/SwitchTheme';
-import { calculatorAction } from '../../reducers/calculatorReducer/calculatorReducer';
-import { historyAction } from '../../reducers/historyReducer/historyReducer';
-import { themeActions } from '../../reducers/themeReducer/themeReducer.ts';
-import { getIsShowControlPanel } from '../../selectors/CalculatorSelector/CalculatorSelector';
-import { getHistoryLength } from '../../selectors/HistorySelectors/HistorySelectors';
+import { calculatorAction, historyAction, themeActions } from '../../reducers';
+import { getHistoryLength, getIsShowControlPanel } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { Container, Title } from './components';

@@ -2,10 +2,8 @@ import React from 'react';
 
 import { useDispatch } from 'react-redux';
 
-import {
-  historyAction,
-  HistoryType,
-} from '../../../../../reducers/historyReducer/historyReducer';
+import { historyAction } from '../../../../../reducers';
+import { HistoryType } from '../../../../../reducers/historyReducer/types';
 import { ReturnComponentType } from '../../../../../types/ReturnComponentType';
 
 import { HistoryButton, HistoryItemContainer } from './components';

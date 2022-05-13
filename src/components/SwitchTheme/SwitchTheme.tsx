@@ -7,7 +7,8 @@ import React, {
 
 import { useDispatch } from 'react-redux';
 
-import { MainThemeType, themeActions } from '../../reducers/themeReducer/themeReducer.ts';
+import { themeActions } from '../../reducers';
+import { MainThemeType } from '../../reducers/themeReducer/types';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { Container, Title } from './components';

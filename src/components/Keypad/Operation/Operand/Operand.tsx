@@ -3,7 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { StyledButton } from '../../../../layouts';
-import { getOperations } from '../../../../selectors/CalculatorSelector/CalculatorSelector';
+import { getOperations } from '../../../../selectors';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 import { OperandContainer } from './components';

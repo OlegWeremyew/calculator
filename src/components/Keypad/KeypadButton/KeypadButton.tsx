@@ -4,11 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { EMPTY_STRING } from '../../../constants';
 import { StyledButton } from '../../../layouts';
-import { calculatorAction } from '../../../reducers/calculatorReducer/calculatorReducer';
-import {
-  getButtons,
-  getCurrentValue,
-} from '../../../selectors/CalculatorSelector/CalculatorSelector';
+import { calculatorAction } from '../../../reducers';
+import { getButtons, getCurrentValue } from '../../../selectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import { KeypadButtonContainer } from './components';

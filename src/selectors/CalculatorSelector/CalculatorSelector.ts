@@ -1,4 +1,4 @@
-import { ButtonsType } from '../../reducers/calculatorReducer/calculatorReducer';
+import { ButtonsType } from '../../reducers/calculatorReducer/types';
 import { AppRootStateType } from '../../store';
 
 export const getCurrentValue = (state: AppRootStateType): string =>

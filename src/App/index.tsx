@@ -6,7 +6,7 @@ import Header from '../components/Header/Header';
 import Loader from '../components/Loader/Loader';
 import MainContent from '../components/MainContent/HomePage';
 import { ReturnComponentType } from '../types/ReturnComponentType';
-import { getTheme } from '../utils/getTheme';
+import { getTheme } from '../utils';
 
 import { AppWrapper } from './components';
 

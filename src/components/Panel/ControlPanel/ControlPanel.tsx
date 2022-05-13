@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { historyAction } from '../../../reducers/historyReducer/historyReducer';
+import { historyAction } from '../../../reducers';
 import { getIsShowHistoryValue } from '../../../selectors/HistorySelectors/HistorySelectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 

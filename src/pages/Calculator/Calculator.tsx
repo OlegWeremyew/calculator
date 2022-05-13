@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import Display from '../../components/Display/Display';
 import Keypad from '../../components/Keypad/Keypad';
 import Panel from '../../components/Panel/Panel';
-import { getIsShowControlPanel } from '../../selectors/CalculatorSelector/CalculatorSelector';
+import { getIsShowControlPanel } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { CalculatorContainer, StyledBlock } from './components';

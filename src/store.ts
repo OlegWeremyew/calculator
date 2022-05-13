@@ -1,8 +1,6 @@
 import { combineReducers, createStore } from 'redux';
 
-import { calculatorReducer } from './reducers/calculatorReducer/calculatorReducer';
-import { historyReducer } from './reducers/historyReducer/historyReducer';
-import { themeReducer } from './reducers/themeReducer/themeReducer.ts';
+import { calculatorReducer, historyReducer, themeReducer } from './reducers';
 
 export type AppRootStateType = ReturnType<typeof rootReducer>;
 

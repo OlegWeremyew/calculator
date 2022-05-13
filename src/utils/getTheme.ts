@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { themeActions } from '../reducers/themeReducer/themeReducer.ts';
+import { themeActions } from '../reducers';
 import { getThemeValue } from '../selectors/ThemeSelector/ThemeSelector';
 import {
   themeCrimson,

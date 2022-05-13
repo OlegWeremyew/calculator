@@ -8,9 +8,8 @@ import {
   TIME_OUT_VALUE,
   ZERO_NUMBER,
 } from '../../../constants';
-import { calculatorAction } from '../../../reducers/calculatorReducer/calculatorReducer';
-import { historyAction } from '../../../reducers/historyReducer/historyReducer';
-import { getCurrentValue } from '../../../selectors/CalculatorSelector/CalculatorSelector';
+import { calculatorAction, historyAction } from '../../../reducers';
+import { getCurrentValue } from '../../../selectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import Operand from './Operand/Operand';
