@@ -22,6 +22,7 @@ const StyledLoader = styled.div`
   justify-content: center;
   margin-top: 250px;
   color: ${({ theme }: ThemeType) => theme.color};
+  background: ${({ theme }: ThemeType) => theme.background};
 `;
 
 const Loader = (): ReturnComponentType => <StyledLoader>⟳</StyledLoader>;

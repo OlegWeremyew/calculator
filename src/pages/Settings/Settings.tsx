@@ -43,7 +43,6 @@ const Settings = (): ReturnComponentType => {
 
   return (
     <Container>
-      <SwitchTheme />
       <SettingsButton
         title="Set history block visibility:"
         text={textSwitchValue}
@@ -55,10 +54,11 @@ const Settings = (): ReturnComponentType => {
         callback={clearHistory}
       />
       <SettingsButton
-        title="reset all settings"
+        title="Reset all settings:"
         text="reset"
         callback={resetAllSettings}
       />
+      <SwitchTheme />
     </Container>
   );
 };

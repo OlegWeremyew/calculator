@@ -7,7 +7,7 @@ import { getCurrentValue } from '../../selectors/CalculatorSelector/CalculatorSe
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-const StyledDisplay = styled.div`
+const DisplayContainer = styled.div`
   max-width: 420px;
   height: 80px;
   display: flex;
@@ -27,7 +27,7 @@ const StyledDisplay = styled.div`
 const Display = (): ReturnComponentType => {
   const currentValue = useSelector(getCurrentValue);
 
-  return <StyledDisplay>{currentValue || 'lets start 🖩'}</StyledDisplay>;
+  return <DisplayContainer>{currentValue || 'lets start 🖩'}</DisplayContainer>;
 };
 
 export default Display;

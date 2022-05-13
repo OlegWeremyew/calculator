@@ -12,7 +12,7 @@ import {
 import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-const StyledKeypadButton = styled.div`
+const KeypadButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +64,7 @@ const KeypadButton = (): ReturnComponentType => {
     dispatch(calculatorAction.addNewSymbol(currentValue + value));
   };
   return (
-    <StyledKeypadButton>
+    <KeypadButtonContainer>
       {buttons.map(button => (
         <StyledButton
           type="button"
@@ -75,7 +75,7 @@ const KeypadButton = (): ReturnComponentType => {
           {button.value}
         </StyledButton>
       ))}
-    </StyledKeypadButton>
+    </KeypadButtonContainer>
   );
 };
 

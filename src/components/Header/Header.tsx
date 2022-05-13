@@ -18,7 +18,7 @@ const rotateAnimation = keyframes`
   }
 `;
 
-const StyledHeader = styled.header`
+const HeaderContainer = styled.header`
   height: 65px;
   display: flex;
   padding: 10px;
@@ -28,18 +28,18 @@ const StyledHeader = styled.header`
   border-bottom: 2px dashed ${({ theme }: ThemeType) => theme.border};
 `;
 
-const StyledImg = styled.img`
-  width: 55px;
-  height: 55px;
+const Image = styled.img`
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   animation: ${rotateAnimation} 8s infinite linear;
 `;
 
 const Header = (): ReturnComponentType => (
-  <StyledHeader>
-    <StyledImg src={calculator} alt="calculator" />
+  <HeaderContainer>
+    <Image src={calculator} alt="calculator" />
     <Navbar />
-  </StyledHeader>
+  </HeaderContainer>
 );
 
 export default Header;

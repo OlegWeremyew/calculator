@@ -10,7 +10,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import HistoryButton from './HistoryButton/HistoryButton';
 
-const StyledHistory = styled.div`
+const HistoryContainer = styled.div`
   font-size: 20px;
   padding: 10px;
   margin-left: 15px;
@@ -60,7 +60,7 @@ const ControlPanel = (): ReturnComponentType => {
   };
 
   return (
-    <StyledHistory>
+    <HistoryContainer>
       <Title>ControlPanel</Title>
       {isShowHistory ? (
         <ControlBlock>
@@ -76,7 +76,7 @@ const ControlPanel = (): ReturnComponentType => {
           <HistoryButton callback={showHistoryHandler}>Show history 👀</HistoryButton>
         </ControlBlock>
       )}
-    </StyledHistory>
+    </HistoryContainer>
   );
 };
 export default ControlPanel;

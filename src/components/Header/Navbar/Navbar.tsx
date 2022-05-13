@@ -7,7 +7,7 @@ import { PATH } from '../../../constants';
 import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-const StyledNavbar = styled.nav`
+const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,10 +17,10 @@ const StyledNavbar = styled.nav`
 `;
 
 const Navbar = (): ReturnComponentType => (
-  <StyledNavbar>
+  <NavbarContainer>
     <NavLink to={PATH.HOME_PAGE_ROUTE}>Calculator</NavLink>
     <NavLink to={PATH.SETTINGS_PAGE_ROUTE}>Settings</NavLink>
-  </StyledNavbar>
+  </NavbarContainer>
 );
 
 export default Navbar;

@@ -10,7 +10,7 @@ import { getIsShowControlPanel } from '../../selectors/CalculatorSelector/Calcul
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-const StyledCalculator = styled.div`
+const CalculatorContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -22,7 +22,7 @@ const StyledCalculator = styled.div`
   }
 `;
 
-const StyledDiv = styled.div`
+const StyledBlock = styled.div`
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   min-width: 200px;
   height: 608px;
@@ -36,26 +36,26 @@ const Calculator = (): ReturnComponentType => {
   const isShowControlPanel = useSelector(getIsShowControlPanel);
 
   return (
-    <StyledCalculator>
+    <CalculatorContainer>
       {isShowControlPanel ? (
-        <StyledCalculator>
-          <StyledDiv>
+        <CalculatorContainer>
+          <StyledBlock>
             <Display />
             <Keypad />
-          </StyledDiv>
+          </StyledBlock>
           <div>
             <Panel />
           </div>
-        </StyledCalculator>
+        </CalculatorContainer>
       ) : (
-        <StyledCalculator>
-          <StyledDiv>
+        <CalculatorContainer>
+          <StyledBlock>
             <Display />
             <Keypad />
-          </StyledDiv>
-        </StyledCalculator>
+          </StyledBlock>
+        </CalculatorContainer>
       )}
-    </StyledCalculator>
+    </CalculatorContainer>
   );
 };
 

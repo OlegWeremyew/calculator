@@ -7,7 +7,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import HistoryList from './HistoryList/HistoryList';
 
-const StyledHistory = styled.div`
+const HistoryContainer = styled.div`
   font-size: 20px;
   padding: 10px;
   margin-left: 15px;
@@ -35,10 +35,10 @@ const Title = styled.h1`
 `;
 
 const History = (): ReturnComponentType => (
-  <StyledHistory>
+  <HistoryContainer>
     <Title>History</Title>
     <HistoryList />
-  </StyledHistory>
+  </HistoryContainer>
 );
 
 export default History;

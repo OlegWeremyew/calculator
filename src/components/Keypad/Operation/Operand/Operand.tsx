@@ -7,7 +7,7 @@ import { getOperations } from '../../../../selectors/CalculatorSelector/Calculat
 import { ThemeType } from '../../../../theme';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
-const StyledOperand = styled.div`
+const OperandContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,7 +48,7 @@ const Operand: React.FC<OperationType> = ({ createOperation }): ReturnComponentT
   const operations = useSelector(getOperations);
 
   return (
-    <StyledOperand>
+    <OperandContainer>
       {operations.map(operation => (
         <StyledButton
           type="button"
@@ -59,7 +59,7 @@ const Operand: React.FC<OperationType> = ({ createOperation }): ReturnComponentT
           {operation.value}
         </StyledButton>
       ))}
-    </StyledOperand>
+    </OperandContainer>
   );
 };
 

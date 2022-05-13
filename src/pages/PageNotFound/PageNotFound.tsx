@@ -7,7 +7,7 @@ import { PATH } from '../../constants';
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-const StyledPage = styled.div`
+const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,12 +46,12 @@ const PageNotFound = (): ReturnComponentType => {
   };
 
   return (
-    <StyledPage>
+    <PageContainer>
       <Title>Page not found</Title>
       <ReturnButton type="button" onClick={returnHomePage}>
         Return to the homepage 🏠
       </ReturnButton>
-    </StyledPage>
+    </PageContainer>
   );
 };
 

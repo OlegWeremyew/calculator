@@ -7,7 +7,7 @@ import { PATH } from '../../constants';
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-const StyledMainContent = styled.main`
+const MainContainer = styled.main`
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -21,13 +21,13 @@ const Settings = React.lazy(() => import('../../pages/Settings/Settings'));
 const PageNotFound = React.lazy(() => import('../../pages/PageNotFound/PageNotFound'));
 
 const MainContent = (): ReturnComponentType => (
-  <StyledMainContent>
+  <MainContainer>
     <Routes>
       <Route path={PATH.HOME_PAGE_ROUTE} element={<Calculator />} />
       <Route path={PATH.SETTINGS_PAGE_ROUTE} element={<Settings />} />
       <Route path={PATH.ERROR_PAGE_ROUTE} element={<PageNotFound />} />
     </Routes>
-  </StyledMainContent>
+  </MainContainer>
 );
 
 export default MainContent;

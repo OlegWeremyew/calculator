@@ -7,7 +7,7 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 import KeypadButton from './KeypadButton/KeypadButton';
 import Operation from './Operation/Operation';
 
-const StyledKeypad = styled.div`
+const KeypadContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 420px;
@@ -15,15 +15,14 @@ const StyledKeypad = styled.div`
 
   @media (max-width: 445px) {
     width: 310px;
-    background-color: #730bc4;
   }
 `;
 
 const Keypad = (): ReturnComponentType => (
-  <StyledKeypad>
+  <KeypadContainer>
     <KeypadButton />
     <Operation />
-  </StyledKeypad>
+  </KeypadContainer>
 );
 
 export default Keypad;

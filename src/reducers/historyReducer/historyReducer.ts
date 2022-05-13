@@ -41,6 +41,20 @@ export const historyReducer = (
         isShowHistory: action.payload.status,
       };
     }
+    case 'SET_HISTORY_FROM_SESSION_STORAGE': {
+      return {
+        ...state,
+        historyWindow: action.payload.list,
+      };
+    }
+    case 'DELETE_HISTORY_ITEM': {
+      return {
+        ...state,
+        historyWindow: state.historyWindow.filter(
+          item => item.id !== action.payload.itemID,
+        ),
+      };
+    }
     default:
       return state;
   }
@@ -65,6 +79,22 @@ export const historyAction = {
       type: 'SET_HISTORY_BLOCK_VISIBILITY',
       payload: {
         status,
+      },
+    } as const;
+  },
+  setHistoryFromSessionStorage(list: HistoryType[]) {
+    return {
+      type: 'SET_HISTORY_FROM_SESSION_STORAGE',
+      payload: {
+        list,
+      },
+    } as const;
+  },
+  deleteHistoryItem(itemID: string) {
+    return {
+      type: 'DELETE_HISTORY_ITEM',
+      payload: {
+        itemID,
       },
     } as const;
   },

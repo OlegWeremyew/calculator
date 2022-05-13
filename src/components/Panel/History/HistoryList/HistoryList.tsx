@@ -1,37 +1,39 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import { getHistory } from '../../../../selectors/HistorySelectors/HistorySelectors';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
+import { getHistoryList } from '../../../../utils/getHistoryList';
 
-const StyledHistoryList = styled.div`
+import HistoryItem from './HistoryItem/HistoryItem';
+
+const HistoryListContainer = styled.div`
   padding-left: 10px;
   margin-left: 10px;
 `;
 
-const Title = styled.div`
+const Text = styled.div`
   margin: 10px 0;
 `;
 
+const Title = styled.h1`
+  text-align: center;
+  font-size: 18px;
+`;
+
 const HistoryList = (): ReturnComponentType => {
-  const historyWindow = useSelector(getHistory);
+  const historyWindow = getHistoryList();
 
   return (
-    <StyledHistoryList>
-      <Title>
+    <HistoryListContainer>
+      <Text>
         {!historyWindow.length ? (
-          'Operations history is empty'
+          <Title>Operations history is empty</Title>
         ) : (
-          <ol>
-            {historyWindow.map(historyItem => (
-              <li key={historyItem.id}>{historyItem.value}</li>
-            ))}
-          </ol>
+          <HistoryItem historyWindow={historyWindow} />
         )}
-      </Title>
-    </StyledHistoryList>
+      </Text>
+    </HistoryListContainer>
   );
 };
 
