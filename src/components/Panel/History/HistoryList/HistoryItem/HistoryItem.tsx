@@ -14,6 +14,7 @@ const HistoryItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  font-weight: 700;
 `;
 
 const HistoryButton = styled.div`
@@ -46,20 +47,21 @@ const HistoryItem: React.FC<HistoryItemType> = ({
   const deleteHistoryItem = (ItemID: string): void => {
     dispatch(historyAction.deleteHistoryItem(ItemID));
   };
-
   return (
-    <div>
+    <article>
       <ol>
         {historyWindow.map(historyItem => (
           <HistoryItemContainer key={historyItem.id}>
-            <li>{historyItem.value}</li>
+            <li>
+              {historyItem.value} = {historyItem.result}
+            </li>
             <HistoryButton onClick={() => deleteHistoryItem(historyItem.id)}>
               ⌦
             </HistoryButton>
           </HistoryItemContainer>
         ))}
       </ol>
-    </div>
+    </article>
   );
 };
 

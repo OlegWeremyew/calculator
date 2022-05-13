@@ -10,7 +10,7 @@ import { getIsShowControlPanel } from '../../selectors/CalculatorSelector/Calcul
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-const CalculatorContainer = styled.div`
+const CalculatorContainer = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
@@ -22,7 +22,7 @@ const CalculatorContainer = styled.div`
   }
 `;
 
-const StyledBlock = styled.div`
+const StyledBlock = styled.article`
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   min-width: 200px;
   height: 608px;

@@ -41,7 +41,7 @@ export const calculatorReducer = (
   action: ActionCalculatorTypes,
 ): CalculatorInitialValueType => {
   switch (action.type) {
-    case 'ADD_NEW_SYMBOL': {
+    case 'ADD_NEW_SYMBOL_OR_GET_CURRENT_VALUE_FROM_LOCAL_STORAGE': {
       return {
         ...state,
         currentValue: action.payload.value,
@@ -77,9 +77,9 @@ export const calculatorReducer = (
 };
 
 export const calculatorAction = {
-  addNewSymbol(value: string) {
+  changeCurrentValue(value: string) {
     return {
-      type: 'ADD_NEW_SYMBOL',
+      type: 'ADD_NEW_SYMBOL_OR_GET_CURRENT_VALUE_FROM_LOCAL_STORAGE',
       payload: {
         value,
       },

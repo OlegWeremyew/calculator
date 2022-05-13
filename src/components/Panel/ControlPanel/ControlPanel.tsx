@@ -10,7 +10,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import HistoryButton from './HistoryButton/HistoryButton';
 
-const HistoryContainer = styled.div`
+const HistoryContainer = styled.article`
   font-size: 20px;
   padding: 10px;
   margin-left: 15px;

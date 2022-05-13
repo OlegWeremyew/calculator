@@ -41,15 +41,18 @@ const Operation = (): ReturnComponentType => {
         !currentValue.includes('*') &&
         !currentValue.includes('/')
       )
-        dispatch(calculatorAction.addNewSymbol(currentValue));
+        dispatch(calculatorAction.changeCurrentValue(currentValue));
       else {
-        dispatch(calculatorAction.addNewSymbol(`${currentValue}.`));
+        dispatch(calculatorAction.changeCurrentValue(`${currentValue}.`));
       }
     } else if (value === '=') {
       try {
+        dispatch(
+          // eslint-disable-next-line no-eval
+          calculatorAction.changeCurrentValue(eval(currentValue).toFixed(FIXED_LENGTH)),
+        );
         // eslint-disable-next-line no-eval
-        dispatch(calculatorAction.addNewSymbol(eval(currentValue).toFixed(FIXED_LENGTH)));
-        dispatch(historyAction.addNewHistory(currentValue));
+        dispatch(historyAction.addNewHistory(currentValue, eval(currentValue)));
       } catch {
         dispatch(calculatorAction.setErrorValue());
         setTimeout(() => {

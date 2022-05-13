@@ -59,9 +59,9 @@ const KeypadButton = (): ReturnComponentType => {
 
   const tapeNumber = (value: string): void => {
     if (currentValue === '0') {
-      dispatch(calculatorAction.addNewSymbol(EMPTY_STRING));
+      dispatch(calculatorAction.changeCurrentValue(EMPTY_STRING));
     }
-    dispatch(calculatorAction.addNewSymbol(currentValue + value));
+    dispatch(calculatorAction.changeCurrentValue(currentValue + value));
   };
   return (
     <KeypadButtonContainer>

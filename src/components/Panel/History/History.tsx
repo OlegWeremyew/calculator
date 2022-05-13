@@ -7,7 +7,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import HistoryList from './HistoryList/HistoryList';
 
-const HistoryContainer = styled.div`
+const HistoryContainer = styled.details`
   font-size: 20px;
   padding: 10px;
   margin-left: 15px;

@@ -1,11 +1,10 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
-import { getCurrentValue } from '../../selectors/CalculatorSelector/CalculatorSelector';
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
+import { getCurrentValueFromLocalStorage } from '../../utils/getCurrentValue';
 
 const DisplayContainer = styled.div`
   max-width: 420px;
@@ -25,7 +24,7 @@ const DisplayContainer = styled.div`
 `;
 
 const Display = (): ReturnComponentType => {
-  const currentValue = useSelector(getCurrentValue);
+  const currentValue = getCurrentValueFromLocalStorage();
 
   return <DisplayContainer>{currentValue || 'lets start 🖩'}</DisplayContainer>;
 };

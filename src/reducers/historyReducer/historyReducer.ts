@@ -13,6 +13,7 @@ export type HistoryInitialValueType = {
 export type HistoryType = {
   id: string;
   value: string;
+  result: string;
 };
 
 export const historyReducer = (
@@ -25,7 +26,11 @@ export const historyReducer = (
         ...state,
         historyWindow: [
           ...state.historyWindow,
-          { id: String(Date.now()), value: action.payload.value },
+          {
+            id: String(Date.now()),
+            value: action.payload.value,
+            result: action.payload.current,
+          },
         ],
       };
     }
@@ -61,11 +66,12 @@ export const historyReducer = (
 };
 
 export const historyAction = {
-  addNewHistory(value: string) {
+  addNewHistory(value: string, current: string) {
     return {
       type: 'ADD_NEW_HISTORY',
       payload: {
         value,
+        current,
       },
     } as const;
   },
