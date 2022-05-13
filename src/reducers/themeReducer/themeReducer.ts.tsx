@@ -3,7 +3,7 @@ import { InferActionTypes } from '../../store';
 const CHANGE_THEME = 'CHANGE_THEME';
 export type MainThemeType = 'dark' | 'light-brown' | 'light' | 'heavenly' | 'crimson';
 const initialThemeState = {
-  theme: 'light' as MainThemeType,
+  theme: 'dark' as MainThemeType,
 };
 
 type initStateThemeType = typeof initialThemeState;
@@ -22,7 +22,7 @@ export const themeReducer = (
 };
 
 export const themeActions = {
-  changeThemeAC(theme: MainThemeType) {
+  changeTheme(theme: MainThemeType) {
     return {
       type: CHANGE_THEME,
       payload: {

@@ -18,8 +18,9 @@ const StyledLoader = styled.div`
   animation: ${rotateAnimation} 5s infinite linear;
   font-size: 120px;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
   color: ${({ theme }: ThemeType) => theme.color};
 `;
 

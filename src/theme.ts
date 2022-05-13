@@ -70,14 +70,16 @@ declare module 'styled-components' {
 }
 
 export type ThemeType = {
-  theme: {
-    background: string;
-    color: string;
-    buttonsBgc: string;
-    font: string;
-    hoverBgc: string;
-    border: string;
-    error: string;
-    displayBgc: string;
-  };
+  theme: ThemeObjectType;
+};
+
+export type ThemeObjectType = {
+  background: string;
+  color: string;
+  buttonsBgc: string;
+  font: string;
+  hoverBgc: string;
+  border: string;
+  error: string;
+  displayBgc: string;
 };

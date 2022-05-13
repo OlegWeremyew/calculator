@@ -9,3 +9,6 @@ export const getButtons = (state: AppRootStateType): ButtonsType[] =>
 
 export const getOperations = (state: AppRootStateType): ButtonsType[] =>
   state.calculator.operations;
+
+export const getIsShowControlPanel = (state: AppRootStateType): boolean =>
+  state.calculator.isShowControlPanel;

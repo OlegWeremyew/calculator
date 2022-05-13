@@ -11,10 +11,11 @@ const StyledButton = styled.button`
   background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   cursor: pointer;
   margin-left: 6px;
-  font-size: 18px;
+  font-size: 14px;
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   border-radius: 5px;
   color: ${({ theme }: ThemeType) => theme.color};
+  text-transform: uppercase;
 
   &:first-child {
     margin-left: 0;

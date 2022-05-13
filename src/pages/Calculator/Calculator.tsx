@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import Display from '../../components/Display/Display';
 import Keypad from '../../components/Keypad/Keypad';
 import Panel from '../../components/Panel/Panel';
+import { getIsShowControlPanel } from '../../selectors/CalculatorSelector/CalculatorSelector';
 import { ThemeType } from '../../theme';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
@@ -30,16 +32,31 @@ const StyledDiv = styled.div`
   }
 `;
 
-const Calculator = (): ReturnComponentType => (
-  <StyledCalculator>
-    <StyledDiv>
-      <Display />
-      <Keypad />
-    </StyledDiv>
-    <div>
-      <Panel />
-    </div>
-  </StyledCalculator>
-);
+const Calculator = (): ReturnComponentType => {
+  const isShowControlPanel = useSelector(getIsShowControlPanel);
+
+  return (
+    <StyledCalculator>
+      {isShowControlPanel ? (
+        <StyledCalculator>
+          <StyledDiv>
+            <Display />
+            <Keypad />
+          </StyledDiv>
+          <div>
+            <Panel />
+          </div>
+        </StyledCalculator>
+      ) : (
+        <StyledCalculator>
+          <StyledDiv>
+            <Display />
+            <Keypad />
+          </StyledDiv>
+        </StyledCalculator>
+      )}
+    </StyledCalculator>
+  );
+};
 
 export default Calculator;

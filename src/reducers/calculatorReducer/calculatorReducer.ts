@@ -3,6 +3,7 @@ import { InferActionTypes } from '../../store';
 
 export const CalculatorInitialValue: CalculatorInitialValueType = {
   currentValue: EMPTY_STRING,
+  isShowControlPanel: true,
   buttons: [
     { value: '7' },
     { value: '8' },
@@ -26,6 +27,7 @@ export const CalculatorInitialValue: CalculatorInitialValueType = {
 
 export type CalculatorInitialValueType = {
   currentValue: string;
+  isShowControlPanel: boolean;
   buttons: ButtonsType[];
   operations: ButtonsType[];
 };
@@ -60,7 +62,13 @@ export const calculatorReducer = (
     case 'SET_ERROR_VALUE': {
       return {
         ...state,
-        currentValue: 'Error',
+        currentValue: 'Error, incorrect expression',
+      };
+    }
+    case 'SET_CONTROL_PANEL_VISIBILITY': {
+      return {
+        ...state,
+        isShowControlPanel: action.payload.status,
       };
     }
     default:
@@ -93,6 +101,14 @@ export const calculatorAction = {
   setErrorValue() {
     return {
       type: 'SET_ERROR_VALUE',
+    } as const;
+  },
+  setControlPanelVisibility(status: boolean) {
+    return {
+      type: 'SET_CONTROL_PANEL_VISIBILITY',
+      payload: {
+        status,
+      },
     } as const;
   },
 };

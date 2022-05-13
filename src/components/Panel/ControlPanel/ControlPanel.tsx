@@ -7,7 +7,8 @@ import { historyAction } from '../../../reducers/historyReducer/historyReducer';
 import { getIsShowHistoryValue } from '../../../selectors/HistorySelectors/HistorySelectors';
 import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
-import HistoryButton from '../History/HistoryButton/HistoryButton';
+
+import HistoryButton from './HistoryButton/HistoryButton';
 
 const StyledHistory = styled.div`
   font-size: 20px;
@@ -72,9 +73,7 @@ const ControlPanel = (): ReturnComponentType => {
         </ControlBlock>
       ) : (
         <ControlBlock>
-          <HistoryButton callback={showHistoryHandler}>
-            Show history &#128065;
-          </HistoryButton>
+          <HistoryButton callback={showHistoryHandler}>Show history 👀</HistoryButton>
         </ControlBlock>
       )}
     </StyledHistory>

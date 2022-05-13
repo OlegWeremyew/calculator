@@ -10,9 +10,10 @@ import {
   themeHeavenly,
   themeLight,
   themeLightBrown,
+  ThemeObjectType,
 } from '../theme';
 
-export const getTheme = (): any => {
+export const getTheme = (): ThemeObjectType => {
   const dispatch = useDispatch();
 
   const themeValue = useSelector(getThemeValue);
@@ -22,7 +23,7 @@ export const getTheme = (): any => {
     const themeValueAsString = localStorage.getItem('themeValue');
     // eslint-disable-next-line no-unused-expressions
     themeValueAsString &&
-      dispatch(themeActions.changeThemeAC(JSON.parse(themeValueAsString)));
+      dispatch(themeActions.changeTheme(JSON.parse(themeValueAsString)));
   }, []);
 
   useEffect(() => {
