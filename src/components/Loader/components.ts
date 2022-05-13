@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 import { rotateAnimation } from '../../layouts';
-import { ThemeType } from '../../theme';
+import { ThemeType } from '../../types/themeType';
 
-export const Loader = styled.div`
+export const LoaderContainer = styled.div`
   animation: ${rotateAnimation} 5s infinite linear;
   font-size: 120px;
   position: absolute;

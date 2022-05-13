@@ -1,2 +1,2 @@
-export * from './HistoryButton';
-export * from './ControlPanel';
+export { HistoryButton } from './HistoryButton';
+export { ControlPanel } from './ControlPanel';

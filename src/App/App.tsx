@@ -2,15 +2,13 @@ import React from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
-import Header from '../components/Header/Header';
-import Loader from '../components/Loader/Loader';
-import MainContent from '../components/MainContent/HomePage';
+import { Header, Loader, MainContent } from '../components';
 import { ReturnComponentType } from '../types/ReturnComponentType';
 import { getTheme } from '../utils';
 
 import { AppWrapper } from './components';
 
-export default (): ReturnComponentType => {
+export const App = (): ReturnComponentType => {
   const themeStyle = getTheme();
 
   return (

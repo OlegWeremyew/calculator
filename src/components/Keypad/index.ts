@@ -1,3 +1,1 @@
-export * from './KeypadButton';
-export * from './Keypad';
-export * from './Operation';
+export { Keypad } from './Keypad';

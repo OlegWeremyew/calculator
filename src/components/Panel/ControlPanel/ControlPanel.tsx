@@ -9,7 +9,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 import { ControlBlock, HistoryContainer, Title } from './components';
 import { HistoryButton } from './HistoryButton';
 
-const ControlPanel = (): ReturnComponentType => {
+export const ControlPanel = (): ReturnComponentType => {
   const dispatch = useDispatch();
 
   const isShowHistory = useSelector(getIsShowHistoryValue);
@@ -46,4 +46,3 @@ const ControlPanel = (): ReturnComponentType => {
     </HistoryContainer>
   );
 };
-export default ControlPanel;

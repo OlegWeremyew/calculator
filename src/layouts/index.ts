@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-import { ThemeType } from '../theme';
+import { ThemeType } from '../types/themeType';
 
 export const rotateAnimation = keyframes`
   0% {

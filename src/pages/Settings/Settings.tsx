@@ -2,8 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import SettingsButton from '../../components/SettingsButton/SettingsButton';
-import SwitchTheme from '../../components/SwitchTheme/SwitchTheme';
+import { SettingsButton, SwitchTheme } from '../../components';
 import { calculatorAction, historyAction, themeActions } from '../../reducers';
 import { getHistoryLength, getIsShowControlPanel } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';

@@ -7,10 +7,12 @@ import { MainThemeType } from '../../reducers/themeReducer/types';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { Container, Title } from './components';
-import SwitchSelect from './SwitchSelect/SwitchSelect';
+import { SwitchSelect } from './SwitchSelect';
 import { DefaultSelectType } from './types';
 
-const SwitchTheme: React.FC<DefaultSelectType> = ({ onChange }): ReturnComponentType => {
+export const SwitchTheme: React.FC<DefaultSelectType> = ({
+  onChange,
+}): ReturnComponentType => {
   const dispatch = useDispatch();
 
   const changeSelectValue = useCallback((e: ChangeEvent<HTMLSelectElement>): void => {
@@ -26,5 +28,3 @@ const SwitchTheme: React.FC<DefaultSelectType> = ({ onChange }): ReturnComponent
     </Container>
   );
 };
-
-export default SwitchTheme;

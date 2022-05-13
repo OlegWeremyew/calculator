@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ThemeType } from '../../theme';
+import { ThemeType } from '../../types/themeType';
 
 export const DisplayContainer = styled.div`
   max-width: 420px;

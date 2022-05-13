@@ -1,1 +1,1 @@
-export * from './Operand';
+export { Operand } from './Operand';

@@ -11,7 +11,7 @@ const Calculator = React.lazy(() => import('../../pages/Calculator/Calculator'))
 const Settings = React.lazy(() => import('../../pages/Settings/Settings'));
 const PageNotFound = React.lazy(() => import('../../pages/PageNotFound/PageNotFound'));
 
-const MainContent = (): ReturnComponentType => (
+export const MainContent = (): ReturnComponentType => (
   <MainContainer>
     <Routes>
       <Route path={PATH.HOME_PAGE_ROUTE} element={<Calculator />} />
@@ -20,5 +20,3 @@ const MainContent = (): ReturnComponentType => (
     </Routes>
   </MainContainer>
 );
-
-export default MainContent;

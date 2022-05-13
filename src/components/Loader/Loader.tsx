@@ -2,6 +2,6 @@ import React from 'react';
 
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-import { Loader } from './components';
+import { LoaderContainer } from './components';
 
-export default (): ReturnComponentType => <Loader>⟳</Loader>;
+export const Loader = (): ReturnComponentType => <LoaderContainer>⟳</LoaderContainer>;

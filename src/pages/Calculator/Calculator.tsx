@@ -2,9 +2,7 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import Display from '../../components/Display/Display';
-import Keypad from '../../components/Keypad/Keypad';
-import Panel from '../../components/Panel/Panel';
+import { Display, Keypad, Panel } from '../../components';
 import { getIsShowControlPanel } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 

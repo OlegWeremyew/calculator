@@ -1,1 +1,1 @@
-export * from './KeypadButton';
+export { KeypadButton } from './KeypadButton';

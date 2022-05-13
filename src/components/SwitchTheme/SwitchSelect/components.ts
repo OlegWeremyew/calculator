@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-import { ThemeType } from '../../../theme';
+import { ThemeType } from '../../../types/themeType';
 
 export const StyledSelect = styled.select`
   width: 300px;
   padding: 4px 55px 4px 5px;
   cursor: pointer;
-  background: ${({ theme }: ThemeType) => theme.background};
+  background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   appearance: auto;
   border: ${({ theme }: ThemeType) => theme.border} solid 2px;
   border-radius: 3px;

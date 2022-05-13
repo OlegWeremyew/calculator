@@ -12,9 +12,9 @@ import { calculatorAction, historyAction } from '../../../reducers';
 import { getCurrentValue } from '../../../selectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-import Operand from './Operand/Operand';
+import { Operand } from './Operand';
 
-const Operation = (): ReturnComponentType => {
+export const Operation = (): ReturnComponentType => {
   const dispatch = useDispatch();
 
   const currentValue = useSelector(getCurrentValue);
@@ -63,5 +63,3 @@ const Operation = (): ReturnComponentType => {
 
   return <Operand createOperation={createOperation} />;
 };
-
-export default Operation;

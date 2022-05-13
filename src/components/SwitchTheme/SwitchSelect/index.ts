@@ -1,1 +1,1 @@
-export * from './SwitchSelect';
+export { SwitchSelect } from './SwitchSelect';

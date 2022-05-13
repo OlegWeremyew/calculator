@@ -1,1 +1,1 @@
-export * from './HomePage';
+export { MainContent } from './HomePage';

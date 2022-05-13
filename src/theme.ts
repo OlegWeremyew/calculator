@@ -1,6 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 
-import { colors } from './constants/colors';
+import { colors } from './constants';
 
 export const themeLight: DefaultTheme = {
   background: colors.white,
@@ -54,32 +54,4 @@ export const themeCrimson: DefaultTheme = {
   border: colors.lightBlack,
   displayBgc: colors.crimson,
   error: colors.error,
-};
-
-declare module 'styled-components' {
-  export interface DefaultTheme {
-    background: string;
-    color: string;
-    buttonsBgc: string;
-    font: string;
-    hoverBgc: string;
-    border: string;
-    error: string;
-    displayBgc: string;
-  }
-}
-
-export type ThemeType = {
-  theme: ThemeObjectType;
-};
-
-export type ThemeObjectType = {
-  background: string;
-  color: string;
-  buttonsBgc: string;
-  font: string;
-  hoverBgc: string;
-  border: string;
-  error: string;
-  displayBgc: string;
 };

@@ -1,2 +1,1 @@
-export * from './HistoryList';
-export * from './History';
+export { History } from './History';

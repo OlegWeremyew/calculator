@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ThemeType } from '../../../theme';
+import { ThemeType } from '../../../types/themeType';
 
 export const StyledButton = styled.button`
   height: 30px;

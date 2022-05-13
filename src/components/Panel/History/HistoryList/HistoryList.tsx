@@ -4,9 +4,9 @@ import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 import { getHistoryList } from '../../../../utils';
 
 import { HistoryListContainer, Text, Title } from './components';
-import HistoryItem from './HistoryItem/HistoryItem';
+import { HistoryItem } from './HistoryItem';
 
-const HistoryList = (): ReturnComponentType => {
+export const HistoryList = (): ReturnComponentType => {
   const historyWindow = getHistoryList();
 
   return (
@@ -21,5 +21,3 @@ const HistoryList = (): ReturnComponentType => {
     </HistoryListContainer>
   );
 };
-
-export default HistoryList;

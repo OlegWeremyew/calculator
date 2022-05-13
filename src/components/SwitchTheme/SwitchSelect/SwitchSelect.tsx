@@ -8,7 +8,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import { StyledOption, StyledSelect } from './components';
 
-const SwitchSelect = memo(
+export const SwitchSelect = memo(
   ({ changeSelectValue, ...restProps }: any): ReturnComponentType => {
     const currentTheme = useSelector(getThemeValue);
     return (
@@ -25,5 +25,3 @@ const SwitchSelect = memo(
     );
   },
 );
-
-export default SwitchSelect;

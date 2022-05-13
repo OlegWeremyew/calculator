@@ -1,2 +1,2 @@
-export * from './HistoryItem';
-export * from './HistoryList';
+export { HistoryItem } from './HistoryItem';
+export { HistoryList } from './HistoryList';

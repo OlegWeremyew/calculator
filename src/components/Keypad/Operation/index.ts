@@ -1,2 +1,1 @@
-export * from './Operand';
-export * from './Operation';
+export { Operation } from './Operation';

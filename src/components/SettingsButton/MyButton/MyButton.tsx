@@ -5,7 +5,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 import { StyledButton } from './components';
 import { MyButtonType } from './types';
 
-const MyButton: React.FC<MyButtonType> = ({
+export const MyButton: React.FC<MyButtonType> = ({
   children,
   callback,
 }): ReturnComponentType => (
@@ -13,5 +13,3 @@ const MyButton: React.FC<MyButtonType> = ({
     {children}
   </StyledButton>
 );
-
-export default MyButton;

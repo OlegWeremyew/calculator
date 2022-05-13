@@ -10,7 +10,7 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import { KeypadButtonContainer } from './components';
 
-const KeypadButton = (): ReturnComponentType => {
+export const KeypadButton = (): ReturnComponentType => {
   const dispatch = useDispatch();
 
   const buttons = useSelector(getButtons);
@@ -38,5 +38,3 @@ const KeypadButton = (): ReturnComponentType => {
     </KeypadButtonContainer>
   );
 };
-
-export default KeypadButton;

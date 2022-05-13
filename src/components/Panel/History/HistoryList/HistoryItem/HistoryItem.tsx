@@ -8,7 +8,7 @@ import { ReturnComponentType } from '../../../../../types/ReturnComponentType';
 import { HistoryButton, HistoryItemContainer } from './components';
 import { HistoryItemType } from './types';
 
-const HistoryItem: React.FC<HistoryItemType> = ({
+export const HistoryItem: React.FC<HistoryItemType> = ({
   historyWindow,
 }): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -33,5 +33,3 @@ const HistoryItem: React.FC<HistoryItemType> = ({
     </article>
   );
 };
-
-export default HistoryItem;

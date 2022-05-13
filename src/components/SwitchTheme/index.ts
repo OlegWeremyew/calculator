@@ -1,2 +1,1 @@
-export * from './SwitchSelect';
-export * from './SwitchTheme';
+export { SwitchTheme } from './SwitchTheme';

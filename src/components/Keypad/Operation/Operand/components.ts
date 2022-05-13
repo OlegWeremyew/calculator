@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ThemeType } from '../../../../theme';
+import { ThemeType } from '../../../../types/themeType';
 
 export const OperandContainer = styled.div`
   display: flex;

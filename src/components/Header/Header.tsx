@@ -5,13 +5,11 @@ import calculator from '../../assets/images/calculator.png';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { HeaderContainer, Image } from './components';
-import Navbar from './Navbar/Navbar';
+import { Navbar } from './Navbar';
 
-const Header = (): ReturnComponentType => (
+export const Header = (): ReturnComponentType => (
   <HeaderContainer>
     <Image src={calculator} alt="calculator" />
     <Navbar />
   </HeaderContainer>
 );
-
-export default Header;

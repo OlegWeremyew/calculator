@@ -1,8 +1,9 @@
+import { EMPTY_ARRAY } from '../../../constants';
 import * as historyConstants from '../constants';
 import { ActionHistoryTypes, HistoryInitialValueType, HistoryType } from '../types';
 
 export const HistoryInitialValue = {
-  historyWindow: [] as HistoryType[],
+  historyWindow: EMPTY_ARRAY as HistoryType[],
   isShowHistory: true,
 };
 
@@ -27,7 +28,7 @@ export const historyReducer = (
     case historyConstants.CLEAR_HISTORY: {
       return {
         ...state,
-        historyWindow: [],
+        historyWindow: EMPTY_ARRAY,
       };
     }
     case historyConstants.SET_HISTORY_BLOCK_VISIBILITY: {

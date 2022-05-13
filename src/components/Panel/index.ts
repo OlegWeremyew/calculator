@@ -1,3 +1,3 @@
-export * from './History';
-export * from './ControlPanel';
-export * from './Panel';
+export { ControlPanel } from './ControlPanel';
+export { History } from './History';
+export { Panel } from './Panel';

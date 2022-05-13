@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import { rotateAnimation } from '../../layouts';
-import { ThemeType } from '../../theme';
+import { ThemeType } from '../../types/themeType';
 
 export const HeaderContainer = styled.header`
   height: 65px;

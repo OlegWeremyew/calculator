@@ -7,11 +7,9 @@ import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
 import { NavbarContainer } from './components';
 
-const Navbar = (): ReturnComponentType => (
+export const Navbar = (): ReturnComponentType => (
   <NavbarContainer>
     <NavLink to={PATH.HOME_PAGE_ROUTE}>Calculator</NavLink>
     <NavLink to={PATH.SETTINGS_PAGE_ROUTE}>Settings</NavLink>
   </NavbarContainer>
 );
-
-export default Navbar;

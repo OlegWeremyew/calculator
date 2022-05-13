@@ -6,10 +6,10 @@ import { getIsShowHistoryValue } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { PanelContainer } from './components';
-import ControlPanel from './ControlPanel/ControlPanel';
-import History from './History/History';
+import { ControlPanel } from './ControlPanel';
+import { History } from './History';
 
-const Panel = (): ReturnComponentType => {
+export const Panel = (): ReturnComponentType => {
   const isShowHistory = useSelector(getIsShowHistoryValue);
 
   return (
@@ -19,5 +19,3 @@ const Panel = (): ReturnComponentType => {
     </PanelContainer>
   );
 };
-
-export default Panel;

@@ -3,9 +3,10 @@ import React from 'react';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { Container, Title } from './components';
-import MyButton from './MyButton/MyButton';
+import { MyButton } from './MyButton';
+import { SettingsButtonPropsType } from './types';
 
-const SettingsButton: React.FC<PropsType> = ({
+export const SettingsButton: React.FC<SettingsButtonPropsType> = ({
   title,
   text,
   callback,
@@ -15,11 +16,3 @@ const SettingsButton: React.FC<PropsType> = ({
     <MyButton callback={callback}>{text}</MyButton>
   </Container>
 );
-
-export default SettingsButton;
-
-type PropsType = {
-  title: string;
-  text: string;
-  callback: () => void;
-};
