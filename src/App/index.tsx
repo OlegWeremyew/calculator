@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import Header from '../components/Header/Header';
 import Loader from '../components/Loader/Loader';
@@ -8,12 +8,9 @@ import MainContent from '../components/MainContent/HomePage';
 import { ReturnComponentType } from '../types/ReturnComponentType';
 import { getTheme } from '../utils/getTheme';
 
-const AppWrapper = styled.div`
-  width: 100%;
-  height: 100vh;
-`;
+import { AppWrapper } from './components';
 
-const App = (): ReturnComponentType => {
+export default (): ReturnComponentType => {
   const themeStyle = getTheme();
 
   return (
@@ -27,5 +24,3 @@ const App = (): ReturnComponentType => {
     </React.Suspense>
   );
 };
-
-export default App;

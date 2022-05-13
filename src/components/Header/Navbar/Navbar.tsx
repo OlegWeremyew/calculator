@@ -1,20 +1,11 @@
 import React from 'react';
 
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
 
 import { PATH } from '../../../constants';
-import { ThemeType } from '../../../theme';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-const NavbarContainer = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 150px;
-  margin-right: 10px;
-  color: ${({ theme }: ThemeType) => theme.color};
-`;
+import { NavbarContainer } from './components';
 
 const Navbar = (): ReturnComponentType => (
   <NavbarContainer>

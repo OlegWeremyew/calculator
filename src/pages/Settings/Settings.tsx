@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import styled from 'styled-components';
 
 import SettingsButton from '../../components/SettingsButton/SettingsButton';
 import SwitchTheme from '../../components/SwitchTheme/SwitchTheme';
@@ -12,12 +11,7 @@ import { getIsShowControlPanel } from '../../selectors/CalculatorSelector/Calcul
 import { getHistoryLength } from '../../selectors/HistorySelectors/HistorySelectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 450px;
-`;
+import { Container, Title } from './components';
 
 const Settings = (): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -43,8 +37,9 @@ const Settings = (): ReturnComponentType => {
 
   return (
     <Container>
+      <Title>Settings</Title>
       <SettingsButton
-        title="Set history block visibility:"
+        title="Set history block visibility 👀:"
         text={textSwitchValue}
         callback={setHistoryBlockVisibility}
       />
@@ -54,7 +49,7 @@ const Settings = (): ReturnComponentType => {
         callback={clearHistory}
       />
       <SettingsButton
-        title="Reset all settings:"
+        title="Reset all settings 🛠:"
         text="reset"
         callback={resetAllSettings}
       />

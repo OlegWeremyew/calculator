@@ -1,0 +1,15 @@
+import styled from 'styled-components';
+
+import { rotateAnimation } from '../../layouts';
+import { ThemeType } from '../../theme';
+
+export const Loader = styled.div`
+  animation: ${rotateAnimation} 5s infinite linear;
+  font-size: 120px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin-top: 250px;
+  color: ${({ theme }: ThemeType) => theme.color};
+  background: ${({ theme }: ThemeType) => theme.background};
+`;

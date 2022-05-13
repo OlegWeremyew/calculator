@@ -6,24 +6,12 @@ import React, {
 } from 'react';
 
 import { useDispatch } from 'react-redux';
-import styled from 'styled-components';
 
 import { MainThemeType, themeActions } from '../../reducers/themeReducer/themeReducer.ts';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
+import { Container, Title } from './components';
 import SwitchSelect from './SwitchSelect/SwitchSelect';
-
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 5px;
-`;
-
-const Title = styled.h1`
-  font-size: 28px;
-`;
 
 const SwitchTheme: React.FC<DefaultSelectType> = ({ onChange }): ReturnComponentType => {
   const dispatch = useDispatch();
