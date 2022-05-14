@@ -6,7 +6,6 @@ export type ThemeObjectType = {
   background: string;
   color: string;
   buttonsBgc: string;
-  font: string;
   hoverBgc: string;
   border: string;
   error: string;
@@ -18,7 +17,6 @@ declare module 'styled-components' {
     background: string;
     color: string;
     buttonsBgc: string;
-    font: string;
     hoverBgc: string;
     border: string;
     error: string;

@@ -2,11 +2,12 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { Container } from '../../../layouts';
 import { historyAction } from '../../../reducers';
 import { getIsShowHistoryValue } from '../../../selectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-import { ControlBlock, HistoryContainer, Title } from './components';
+import { HistoryContainer, Title } from './components';
 import { HistoryButton } from './HistoryButton';
 
 export const ControlPanel = (): ReturnComponentType => {
@@ -30,18 +31,18 @@ export const ControlPanel = (): ReturnComponentType => {
     <HistoryContainer>
       <Title>ControlPanel</Title>
       {isShowHistory ? (
-        <ControlBlock>
+        <Container>
           <div>
             <HistoryButton callback={clearHistory}>Clear history 🗑️</HistoryButton>
             <HistoryButton callback={hideHistoryHandler}>
               Hide history &#128584;
             </HistoryButton>
           </div>
-        </ControlBlock>
+        </Container>
       ) : (
-        <ControlBlock>
+        <Container>
           <HistoryButton callback={showHistoryHandler}>Show history 👀</HistoryButton>
-        </ControlBlock>
+        </Container>
       )}
     </HistoryContainer>
   );

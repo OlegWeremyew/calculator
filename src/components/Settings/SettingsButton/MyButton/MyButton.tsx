@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ReturnComponentType } from '../../../types/ReturnComponentType';
+import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 import { StyledButton } from './components';
 import { MyButtonType } from './types';

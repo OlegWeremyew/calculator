@@ -2,14 +2,13 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { SettingsButton, SwitchTheme } from '../../components';
+import Settings from '../../components/Settings/Settings';
+import { SettingsContainer } from '../../layouts';
 import { calculatorAction, historyAction, themeActions } from '../../reducers';
 import { getHistoryLength, getIsShowControlPanel } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-import { Container, Title } from './components';
-
-const Settings = (): ReturnComponentType => {
+const SettingsPage = (): ReturnComponentType => {
   const dispatch = useDispatch();
 
   const isShowControlPanel = useSelector(getIsShowControlPanel);
@@ -32,26 +31,16 @@ const Settings = (): ReturnComponentType => {
   const textCleaner = historyArrayLength ? 'clear' : 'empty';
 
   return (
-    <Container>
-      <Title>Settings</Title>
-      <SettingsButton
-        title="Set history block visibility 👀:"
-        text={textSwitchValue}
-        callback={setHistoryBlockVisibility}
+    <SettingsContainer>
+      <Settings
+        textCleaner={textCleaner}
+        textSwitchValue={textSwitchValue}
+        setHistoryBlockVisibility={setHistoryBlockVisibility}
+        clearHistory={clearHistory}
+        resetAllSettings={resetAllSettings}
       />
-      <SettingsButton
-        title="Clear history 🗑️:"
-        text={textCleaner}
-        callback={clearHistory}
-      />
-      <SettingsButton
-        title="Reset all settings 🛠:"
-        text="reset"
-        callback={resetAllSettings}
-      />
-      <SwitchTheme />
-    </Container>
+    </SettingsContainer>
   );
 };
 
-export default Settings;
+export default SettingsPage;

@@ -1,3 +1,3 @@
-export * from './Calculator';
-export * from './PageNotFound';
-export * from './Settings';
+export * from './CalculatorPage';
+export * from './NotFoundPage';
+export * from './SettingsPage';

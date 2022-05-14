@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ThemeType } from '../../../types/themeType';
+import { ThemeType } from '../../../../types/themeType';
 
 export const StyledSelect = styled.select`
   width: 300px;

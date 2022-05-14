@@ -3,12 +3,10 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { EMPTY_STRING } from '../../../constants';
-import { StyledButton } from '../../../layouts';
+import { ButtonContainer, StyledButton } from '../../../layouts';
 import { calculatorAction } from '../../../reducers';
 import { getButtons, getCurrentValue } from '../../../selectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
-
-import { KeypadButtonContainer } from './components';
 
 export const KeypadButton = (): ReturnComponentType => {
   const dispatch = useDispatch();
@@ -24,7 +22,7 @@ export const KeypadButton = (): ReturnComponentType => {
     dispatch(calculatorAction.changeCurrentValue(currentValue + value));
   };
   return (
-    <KeypadButtonContainer>
+    <ButtonContainer>
       {buttons.map(button => (
         <StyledButton
           type="button"
@@ -35,6 +33,6 @@ export const KeypadButton = (): ReturnComponentType => {
           {button.value}
         </StyledButton>
       ))}
-    </KeypadButtonContainer>
+    </ButtonContainer>
   );
 };

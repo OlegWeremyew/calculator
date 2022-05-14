@@ -7,9 +7,9 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { MainContainer } from './components';
 
-const Calculator = React.lazy(() => import('../../pages/Calculator/Calculator'));
-const Settings = React.lazy(() => import('../../pages/Settings/Settings'));
-const PageNotFound = React.lazy(() => import('../../pages/PageNotFound/PageNotFound'));
+const Calculator = React.lazy(() => import('../../pages/CalculatorPage/CalculatorPage'));
+const Settings = React.lazy(() => import('../../pages/SettingsPage/SettingsPage'));
+const PageNotFound = React.lazy(() => import('../../pages/NotFoundPage/NotFoundPage'));
 
 export const MainContent = (): ReturnComponentType => (
   <MainContainer>

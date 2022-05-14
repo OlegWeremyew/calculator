@@ -1,0 +1,1 @@
+export { SettingsClassComponent } from './SettingsClassComponent';

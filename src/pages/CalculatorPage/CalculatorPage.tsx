@@ -8,7 +8,7 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { CalculatorContainer, StyledBlock } from './components';
 
-const Calculator = (): ReturnComponentType => {
+const CalculatorPage = (): ReturnComponentType => {
   const isShowControlPanel = useSelector(getIsShowControlPanel);
 
   return (
@@ -35,4 +35,4 @@ const Calculator = (): ReturnComponentType => {
   );
 };
 
-export default Calculator;
+export default CalculatorPage;

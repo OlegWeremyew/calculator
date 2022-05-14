@@ -2,11 +2,10 @@ import React from 'react';
 
 import { useSelector } from 'react-redux';
 
-import { StyledButton } from '../../../../layouts';
+import { ButtonContainer, StyledButton } from '../../../../layouts';
 import { getOperations } from '../../../../selectors';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
-import { OperandContainer } from './components';
 import { OperationType } from './types';
 
 export const Operand: React.FC<OperationType> = ({
@@ -15,7 +14,7 @@ export const Operand: React.FC<OperationType> = ({
   const operations = useSelector(getOperations);
 
   return (
-    <OperandContainer>
+    <ButtonContainer>
       {operations.map(operation => (
         <StyledButton
           type="button"
@@ -26,6 +25,6 @@ export const Operand: React.FC<OperationType> = ({
           {operation.value}
         </StyledButton>
       ))}
-    </OperandContainer>
+    </ButtonContainer>
   );
 };

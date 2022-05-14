@@ -22,12 +22,6 @@ export const HistoryContainer = styled.article`
   }
 `;
 
-export const ControlBlock = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
 export const Title = styled.h1`
   text-align: center;
   font-size: 30px;

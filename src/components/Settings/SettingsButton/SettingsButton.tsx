@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { ReturnComponentType } from '../../types/ReturnComponentType';
+import { SettingsTitle } from '../../../layouts';
+import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-import { Container, Title } from './components';
+import { Container } from './components';
 import { MyButton } from './MyButton';
 import { SettingsButtonPropsType } from './types';
 
@@ -12,7 +13,7 @@ export const SettingsButton: React.FC<SettingsButtonPropsType> = ({
   callback,
 }): ReturnComponentType => (
   <Container>
-    <Title>{title}</Title>
+    <SettingsTitle>{title}</SettingsTitle>
     <MyButton callback={callback}>{text}</MyButton>
   </Container>
 );

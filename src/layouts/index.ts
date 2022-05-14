@@ -11,6 +11,33 @@ export const rotateAnimation = keyframes`
   }
 `;
 
+export const SettingsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+
+  @media (max-width: 520px) {
+    width: 400px;
+  }
+
+  @media (max-width: 420px) {
+    width: 310px;
+  }
+`;
+
+export const SettingsTitle = styled.h1`
+  font-size: 28px;
+
+  @media (max-width: 520px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 18px;
+  }
+`;
+
 export const StyledButton = styled.button`
   display: flex;
   align-items: center;
@@ -39,4 +66,19 @@ export const StyledButton = styled.button`
   &:active {
     border: inset 4px ${({ theme }: ThemeType) => theme.hoverBgc};
   }
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  background: ${({ theme }: ThemeType): string => theme.background};
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;

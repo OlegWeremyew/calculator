@@ -7,7 +7,7 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { PageContainer, ReturnButton, Title } from './components';
 
-const PageNotFound = (): ReturnComponentType => {
+const NotFoundPage = (): ReturnComponentType => {
   const navigate = useNavigate();
 
   const returnHomePage = (): void => {
@@ -24,4 +24,4 @@ const PageNotFound = (): ReturnComponentType => {
   );
 };
 
-export default PageNotFound;
+export default NotFoundPage;
