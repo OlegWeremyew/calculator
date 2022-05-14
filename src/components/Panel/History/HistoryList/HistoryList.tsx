@@ -8,7 +8,6 @@ import { HistoryItem } from './HistoryItem';
 
 export const HistoryList = (): ReturnComponentType => {
   const historyWindow = useGetHistoryList();
-
   return (
     <HistoryListContainer>
       <Text>

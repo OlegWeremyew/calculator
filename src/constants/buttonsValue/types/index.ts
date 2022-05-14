@@ -1,6 +1,7 @@
 export type ButtonsValueType = {
   buttons: ButtonsType[];
-  operations: ButtonsType[];
+  lowerOperations: ButtonsType[];
+  upperOperations: ButtonsType[];
 };
 
 export type ButtonsType = {

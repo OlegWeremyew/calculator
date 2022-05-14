@@ -12,7 +12,6 @@ import { HistoryButton } from './HistoryButton';
 
 export const ControlPanel = (): ReturnComponentType => {
   const dispatch = useDispatch();
-
   const isShowHistory = useSelector(getIsShowHistoryValue);
 
   const clearHistory = (): void => {

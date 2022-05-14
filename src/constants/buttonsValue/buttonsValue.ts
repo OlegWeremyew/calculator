@@ -19,9 +19,14 @@ export const buttonsValue: ButtonsValueType = {
     { value: ')' },
     { value: '/' },
   ],
-  operations: [{ value: '.' }, { value: '=' }, { value: 'CE' }, { value: 'C' }],
+  lowerOperations: [{ value: '.' }, { value: 'C' }, { value: 'CE' }, { value: '=' }],
+  upperOperations: [{ value: '^' }, { value: '√' }, { value: '∛' }, { value: '%' }],
 };
 
 export const getButtonsKeypads = (): ButtonsType[] => buttonsValue.buttons;
 
-export const getButtonsOperations = (): ButtonsType[] => buttonsValue.operations;
+export const getLowerButtonsOperations = (): ButtonsType[] =>
+  buttonsValue.lowerOperations;
+
+export const getUpperButtonsOperations = (): ButtonsType[] =>
+  buttonsValue.upperOperations;

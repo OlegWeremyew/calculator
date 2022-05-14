@@ -11,6 +11,7 @@ import { StyledOption, StyledSelect } from './components';
 export const SwitchSelect = memo(
   ({ changeSelectValue, ...restProps }: any): ReturnComponentType => {
     const currentTheme = useSelector(getThemeValue);
+
     return (
       <StyledSelect onChange={changeSelectValue} {...restProps}>
         <StyledOption value={currentTheme}>chosen theme: {currentTheme}</StyledOption>

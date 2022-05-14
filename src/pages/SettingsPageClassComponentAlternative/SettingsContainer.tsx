@@ -3,29 +3,22 @@ import React, { ComponentType } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import { calculatorAction, historyAction, themeActions } from '../../reducers';
-import { getHistoryLength, getIsShowControlPanel } from '../../selectors';
+import { calculatorAction, themeActions } from '../../reducers';
+import { getIsShowControlPanel } from '../../selectors';
 import { AppRootStateType } from '../../store';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
+import { SettingsClassComponent } from './SettingsClassComponent';
 import { MapDispatchToPropsType, MapStateToPropsType, SettingsPropsType } from './types';
 
-export class SettingsClassComponent extends React.Component<SettingsPropsType> {
+export class SettingsClassComponentWrapper extends React.Component<SettingsPropsType> {
   render(): ReturnComponentType {
-    const {
-      isShowControlPanel,
-      historyArrayLength,
-      setControlPanelVisibility,
-      clearHistory,
-      changeTheme,
-    } = this.props;
+    const { isShowControlPanel, setControlPanelVisibility, changeTheme } = this.props;
 
     return (
       <SettingsClassComponent
         isShowControlPanel={isShowControlPanel}
-        historyArrayLength={historyArrayLength}
         setControlPanelVisibility={setControlPanelVisibility}
-        clearHistory={clearHistory}
         changeTheme={changeTheme}
       />
     );
@@ -34,7 +27,6 @@ export class SettingsClassComponent extends React.Component<SettingsPropsType> {
 
 const mapStateToProps = (state: AppRootStateType): MapStateToPropsType => ({
   isShowControlPanel: getIsShowControlPanel(state),
-  historyArrayLength: getHistoryLength(state),
 });
 
 export const SettingsContainer = compose<ComponentType>(
@@ -42,8 +34,7 @@ export const SettingsContainer = compose<ComponentType>(
     mapStateToProps,
     {
       setControlPanelVisibility: calculatorAction.setControlPanelVisibility,
-      clearHistory: historyAction.clearHistory,
       changeTheme: themeActions.changeTheme,
     },
   ),
-)(SettingsClassComponent);
+)(SettingsClassComponentWrapper);

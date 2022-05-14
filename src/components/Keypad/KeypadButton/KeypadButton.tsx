@@ -1,26 +1,33 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { EMPTY_STRING } from '../../../constants';
+import { NUMBER_ONE, NUMBER_TWO } from '../../../constants';
 import { getButtonsKeypads } from '../../../constants/buttonsValue/buttonsValue';
 import { ButtonContainer, StyledButton } from '../../../layouts';
 import { calculatorAction } from '../../../reducers';
 import { getCurrentValue } from '../../../selectors';
 import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-export const KeypadButton = (): ReturnComponentType => {
+export const KeypadButton = memo((): ReturnComponentType => {
   const dispatch = useDispatch();
-
   const buttons = getButtonsKeypads();
 
   const currentValue = useSelector(getCurrentValue);
 
   const tapeNumber = (value: string): void => {
-    if (currentValue === '0') {
-      dispatch(calculatorAction.changeCurrentValue(EMPTY_STRING));
+    if (currentValue === '0' && currentValue.length === NUMBER_ONE) {
+      dispatch(calculatorAction.NullifyValue());
+      dispatch(calculatorAction.changeCurrentValue(value));
+    } else if (
+      currentValue[currentValue.length - NUMBER_TWO] === '+' &&
+      currentValue[currentValue.length - NUMBER_ONE] === '0' &&
+      value === '0'
+    ) {
+      dispatch(calculatorAction.changeCurrentValue(currentValue));
+    } else {
+      dispatch(calculatorAction.changeCurrentValue(currentValue + value));
     }
-    dispatch(calculatorAction.changeCurrentValue(currentValue + value));
   };
   return (
     <ButtonContainer>
@@ -36,4 +43,4 @@ export const KeypadButton = (): ReturnComponentType => {
       ))}
     </ButtonContainer>
   );
-};
+});

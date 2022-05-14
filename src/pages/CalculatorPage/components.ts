@@ -17,9 +17,9 @@ export const CalculatorContainer = styled.section`
 export const StyledBlock = styled.article`
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   min-width: 200px;
-  height: 608px;
+  height: 712px;
 
   @media (max-width: 445px) {
-    height: 457px;
+    height: 533px;
   }
 `;

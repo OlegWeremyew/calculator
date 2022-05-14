@@ -1,19 +1,14 @@
-import React from 'react';
+import React, { memo } from 'react';
 
-import { getButtonsOperations } from '../../../../constants/buttonsValue/buttonsValue';
 import { ButtonContainer, StyledButton } from '../../../../layouts';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 import { OperationType } from './types';
 
-export const Operand: React.FC<OperationType> = ({
-  createOperation,
-}): ReturnComponentType => {
-  const operations = getButtonsOperations();
-
-  return (
+export const Operand: React.FC<OperationType> = memo(
+  ({ createOperation, operationsList }): ReturnComponentType => (
     <ButtonContainer>
-      {operations.map(operation => (
+      {operationsList.map(operation => (
         <StyledButton
           type="button"
           key={operation.value}
@@ -24,5 +19,5 @@ export const Operand: React.FC<OperationType> = ({
         </StyledButton>
       ))}
     </ButtonContainer>
-  );
-};
+  ),
+);

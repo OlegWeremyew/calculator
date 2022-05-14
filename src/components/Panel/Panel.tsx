@@ -11,7 +11,6 @@ import { History } from './History';
 
 export const Panel = (): ReturnComponentType => {
   const isShowHistory = useSelector(getIsShowHistoryValue);
-
   return (
     <Container>
       <ControlPanel />
