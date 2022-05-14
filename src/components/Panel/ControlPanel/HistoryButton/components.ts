@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import { ThemeType } from '../../../../types/themeType';
 
 export const StyledButton = styled.button`
-  width: 140px;
+  width: 145px;
   height: 45px;
   background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   cursor: pointer;
-  margin-left: 6px;
+  margin-left: 4px;
   font-size: 14px;
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   border-radius: 5px;

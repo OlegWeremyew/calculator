@@ -17,7 +17,6 @@ export const SwitchTheme: React.FC<DefaultSelectType> = ({
   const dispatch = useDispatch();
 
   const changeSelectValue = useCallback((e: ChangeEvent<HTMLSelectElement>): void => {
-    // eslint-disable-next-line no-unused-expressions
     onChange && onChange(e);
     dispatch(themeActions.changeTheme(e.currentTarget.value as MainThemeType));
   }, []);

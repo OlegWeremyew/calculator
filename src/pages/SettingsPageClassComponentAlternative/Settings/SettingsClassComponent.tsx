@@ -6,7 +6,6 @@ import { SettingsPropsType } from '../types';
 
 import { Container, Title } from './components';
 
-// eslint-disable-next-line react/prefer-stateless-function
 export class SettingsClassComponent extends React.Component<SettingsPropsType> {
   render(): ReturnComponentType {
     const {
@@ -47,5 +46,3 @@ export class SettingsClassComponent extends React.Component<SettingsPropsType> {
     );
   }
 }
-
-export default Settings;

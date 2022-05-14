@@ -4,12 +4,12 @@ import { ThemeProvider } from 'styled-components';
 
 import { Header, Loader, MainContent } from '../components';
 import { ReturnComponentType } from '../types/ReturnComponentType';
-import { getTheme } from '../utils';
+import { useGetTheme } from '../utils';
 
 import { AppWrapper } from './components';
 
 export const App = (): ReturnComponentType => {
-  const themeStyle = getTheme();
+  const themeStyle = useGetTheme();
 
   return (
     <React.Suspense fallback={<Loader />}>

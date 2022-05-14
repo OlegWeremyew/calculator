@@ -10,7 +10,6 @@ import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { MapDispatchToPropsType, MapStateToPropsType, SettingsPropsType } from './types';
 
-// eslint-disable-next-line react/prefer-stateless-function
 export class SettingsClassComponent extends React.Component<SettingsPropsType> {
   render(): ReturnComponentType {
     const {

@@ -1,3 +1,3 @@
-export * from './getCurrentValue';
-export * from './getHistoryList';
-export * from './getTheme';
+export * from './useGetCurrentValue';
+export * from './useGetHistoryList';
+export * from './useGetTheme';

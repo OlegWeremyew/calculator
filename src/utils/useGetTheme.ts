@@ -13,7 +13,7 @@ import {
 } from '../theme';
 import { ThemeObjectType } from '../types/themeType';
 
-export const getTheme = (): ThemeObjectType => {
+export const useGetTheme = (): ThemeObjectType => {
   const dispatch = useDispatch();
 
   const themeValue = useSelector(getThemeValue);

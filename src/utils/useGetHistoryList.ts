@@ -6,7 +6,7 @@ import { historyAction } from '../reducers';
 import { HistoryType } from '../reducers/historyReducer/types';
 import { getHistory } from '../selectors';
 
-export const getHistoryList = (): HistoryType[] => {
+export const useGetHistoryList = (): HistoryType[] => {
   const dispatch = useDispatch();
 
   const currentHistoryList = useSelector(getHistory);

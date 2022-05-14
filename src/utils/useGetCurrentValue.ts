@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { calculatorAction } from '../reducers';
 import { getCurrentValue } from '../selectors';
 
-export const getCurrentValueFromLocalStorage = (): string => {
+export const useGetCurrentValueFromLocalStorage = (): string => {
   const dispatch = useDispatch();
 
   const currentValue = useSelector(getCurrentValue);

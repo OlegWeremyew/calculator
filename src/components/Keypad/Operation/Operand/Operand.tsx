@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { useSelector } from 'react-redux';
-
+import { getButtonsOperations } from '../../../../constants/buttonsValue/buttonsValue';
 import { ButtonContainer, StyledButton } from '../../../../layouts';
-import { getOperations } from '../../../../selectors';
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
 
 import { OperationType } from './types';
@@ -11,7 +9,7 @@ import { OperationType } from './types';
 export const Operand: React.FC<OperationType> = ({
   createOperation,
 }): ReturnComponentType => {
-  const operations = useSelector(getOperations);
+  const operations = getButtonsOperations();
 
   return (
     <ButtonContainer>

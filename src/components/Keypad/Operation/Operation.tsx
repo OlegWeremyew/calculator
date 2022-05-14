@@ -47,10 +47,8 @@ export const Operation = (): ReturnComponentType => {
     } else if (value === '=') {
       try {
         dispatch(
-          // eslint-disable-next-line no-eval
           calculatorAction.changeCurrentValue(eval(currentValue).toFixed(FIXED_LENGTH)),
         );
-        // eslint-disable-next-line no-eval
         dispatch(historyAction.addNewHistory(currentValue, eval(currentValue)));
       } catch {
         dispatch(calculatorAction.setErrorValue());

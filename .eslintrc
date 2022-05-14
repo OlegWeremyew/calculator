@@ -24,15 +24,58 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "semi": "error",
+    "prefer-destructuring": "error",
     "react/jsx-props-no-spreading": "off",
     "no-shadow": "off",
+    "no-unused-vars": "off",
+    "no-eval": "off",
+    "operator-linebreak": "off",
+    "no-unused-expressions": "off",
+    "react/prefer-stateless-function": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react/jsx-closing-tag-location": 2,
+    "react/jsx-closing-bracket-location": "off",
     "no-alert": "error",
     "no-debugger": "error",
     "no-plusplus": "error",
-    "no-unused-vars": "off",
     "no-magic-numbers": "off",
     "default-param-last": "off",
     "no-use-before-define": "off",
+    "react/jsx-max-props-per-line": [
+      2,
+      {
+        "maximum": 2,
+        "when": "always"
+      }
+    ],
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "comma-dangle": [
+      2,
+      "always-multiline"
+    ],
+    "prefer-const": [
+      "error",
+      {
+        "destructuring": "any",
+        "ignoreReadBeforeAssign": false
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 150,
+        "ignoreUrls": true,
+        "ignorePattern": "import"
+      }
+    ],
     "no-multiple-empty-lines": [
       "error",
       {

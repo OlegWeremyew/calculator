@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { ReturnComponentType } from '../../../../types/ReturnComponentType';
-import { getHistoryList } from '../../../../utils';
+import { useGetHistoryList } from '../../../../utils';
 
 import { HistoryListContainer, Text, Title } from './components';
 import { HistoryItem } from './HistoryItem';
 
 export const HistoryList = (): ReturnComponentType => {
-  const historyWindow = getHistoryList();
+  const historyWindow = useGetHistoryList();
 
   return (
     <HistoryListContainer>
