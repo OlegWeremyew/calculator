@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/calculator/static/js/main.3896f59a.js",
+    "main.js": "/calculator/static/js/main.f8a71702.js",
     "static/js/566.0ce9e3bb.chunk.js": "/calculator/static/js/566.0ce9e3bb.chunk.js",
     "static/js/525.cd5efbc6.chunk.js": "/calculator/static/js/525.cd5efbc6.chunk.js",
     "static/js/305.7af7c567.chunk.js": "/calculator/static/js/305.7af7c567.chunk.js",
     "index.html": "/calculator/index.html",
-    "main.3896f59a.js.map": "/calculator/static/js/main.3896f59a.js.map",
+    "main.f8a71702.js.map": "/calculator/static/js/main.f8a71702.js.map",
     "566.0ce9e3bb.chunk.js.map": "/calculator/static/js/566.0ce9e3bb.chunk.js.map",
     "525.cd5efbc6.chunk.js.map": "/calculator/static/js/525.cd5efbc6.chunk.js.map",
     "305.7af7c567.chunk.js.map": "/calculator/static/js/305.7af7c567.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.3896f59a.js"
+    "static/js/main.f8a71702.js"
   ]
 }
