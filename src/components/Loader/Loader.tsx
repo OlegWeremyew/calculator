@@ -2,6 +2,10 @@ import React from 'react';
 
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-import { LoaderContainer } from './components';
+import { LoaderBlock, LoaderContainer } from './components';
 
-export const Loader = (): ReturnComponentType => <LoaderContainer>⟳</LoaderContainer>;
+export const Loader = (): ReturnComponentType => (
+  <LoaderContainer>
+    <LoaderBlock>⟳</LoaderBlock>
+  </LoaderContainer>
+);

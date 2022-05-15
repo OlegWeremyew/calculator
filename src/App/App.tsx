@@ -12,13 +12,13 @@ export const App = (): ReturnComponentType => {
   const themeStyle = useGetTheme();
 
   return (
-    <React.Suspense fallback={<Loader />}>
-      <ThemeProvider theme={themeStyle}>
+    <ThemeProvider theme={themeStyle}>
+      <React.Suspense fallback={<Loader />}>
         <AppWrapper>
           <Header />
           <MainContent />
         </AppWrapper>
-      </ThemeProvider>
-    </React.Suspense>
+      </React.Suspense>
+    </ThemeProvider>
   );
 };
