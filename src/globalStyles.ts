@@ -29,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
     &:focus {
       font-weight: 700;
     }
-    
+
   }
 
   body {

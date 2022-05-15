@@ -15,7 +15,7 @@ const SettingsPage = (): ReturnComponentType => {
 
   const setHistoryBlockVisibility = useCallback((): void => {
     dispatch(calculatorAction.setControlPanelVisibility(!isShowControlPanel));
-  }, [dispatch]);
+  }, [dispatch, isShowControlPanel]);
 
   const resetAllSettings = useCallback((): void => {
     dispatch(calculatorAction.setControlPanelVisibility(true));
