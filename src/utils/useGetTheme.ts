@@ -21,7 +21,6 @@ export const useGetTheme = (): ThemeObjectType => {
 
   useEffect(() => {
     const themeValueAsString = localStorage.getItem('themeValue');
-    // eslint-disable-next-line no-unused-expressions
     themeValueAsString &&
       dispatch(themeActions.changeTheme(JSON.parse(themeValueAsString)));
   }, []);

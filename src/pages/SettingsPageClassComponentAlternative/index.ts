@@ -1,1 +1,1 @@
-export { SettingsContainer } from './SettingsContainer';
+export * from './SettingsContainer';

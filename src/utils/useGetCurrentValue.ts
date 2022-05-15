@@ -12,7 +12,6 @@ export const useGetCurrentValueFromLocalStorage = (): string => {
 
   useEffect(() => {
     const currentValueAsString = localStorage.getItem('currentValueAsString');
-    // eslint-disable-next-line no-unused-expressions
     currentValueAsString &&
       dispatch(calculatorAction.changeCurrentValue(JSON.parse(currentValueAsString)));
   }, []);

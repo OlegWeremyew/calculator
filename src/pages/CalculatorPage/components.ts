@@ -6,13 +6,15 @@ export const CalculatorContainer = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
 
   @media (max-width: 800px) {
     flex-direction: column;
     align-items: center;
   }
 `;
+
+export const CalculatorBlock = styled(CalculatorContainer)``;
 
 export const StyledBlock = styled.article`
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;

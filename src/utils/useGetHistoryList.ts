@@ -13,7 +13,6 @@ export const useGetHistoryList = (): HistoryType[] => {
 
   useEffect(() => {
     const currentHistoryListAsString = localStorage.getItem('currentHistoryList');
-    // eslint-disable-next-line no-unused-expressions
     currentHistoryListAsString &&
       dispatch(
         historyAction.setHistoryFromSessionStorage(

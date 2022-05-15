@@ -6,7 +6,7 @@ import { Display, Keypad, Panel } from '../../components';
 import { getIsShowControlPanel } from '../../selectors';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-import { CalculatorContainer, StyledBlock } from './components';
+import { CalculatorBlock, CalculatorContainer, StyledBlock } from './components';
 
 const CalculatorPage = (): ReturnComponentType => {
   const isShowControlPanel = useSelector(getIsShowControlPanel);
@@ -14,7 +14,7 @@ const CalculatorPage = (): ReturnComponentType => {
   return (
     <CalculatorContainer>
       {isShowControlPanel ? (
-        <CalculatorContainer>
+        <CalculatorBlock>
           <StyledBlock>
             <Display />
             <Keypad />
@@ -22,14 +22,14 @@ const CalculatorPage = (): ReturnComponentType => {
           <div>
             <Panel />
           </div>
-        </CalculatorContainer>
+        </CalculatorBlock>
       ) : (
-        <CalculatorContainer>
+        <CalculatorBlock>
           <StyledBlock>
             <Display />
             <Keypad />
           </StyledBlock>
-        </CalculatorContainer>
+        </CalculatorBlock>
       )}
     </CalculatorContainer>
   );

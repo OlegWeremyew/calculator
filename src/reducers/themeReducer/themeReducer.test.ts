@@ -1,5 +1,6 @@
-import { themeActions, themeReducer } from './themeReducer';
-import { initStateThemeType, MainThemeType } from './themeReducer/types';
+import { initStateThemeType, MainThemeType } from './types';
+
+import { themeActions, themeReducer } from './index';
 
 const startState: initStateThemeType = {
   theme: 'dark' as MainThemeType,

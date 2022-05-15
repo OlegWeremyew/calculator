@@ -29,7 +29,7 @@ const mapStateToProps = (state: AppRootStateType): MapStateToPropsType => ({
   isShowControlPanel: getIsShowControlPanel(state),
 });
 
-export const SettingsContainer = compose<ComponentType>(
+const SettingsContainer = compose<ComponentType>(
   connect<MapStateToPropsType, MapDispatchToPropsType, {}, AppRootStateType>(
     mapStateToProps,
     {
@@ -38,3 +38,5 @@ export const SettingsContainer = compose<ComponentType>(
     },
   ),
 )(SettingsClassComponentWrapper);
+
+export default SettingsContainer;
