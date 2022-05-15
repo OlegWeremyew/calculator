@@ -6,10 +6,10 @@ export const HistoryContainer = styled.article`
   font-size: 20px;
   padding: 10px;
   margin-left: 15px;
-  width: 320px;
+  width: 370px;
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
 
-  @media (max-width: 800px) {
+  @media (max-width: 835px) {
     width: 420px;
     margin-left: 0;
     margin-top: 10px;

@@ -18,4 +18,11 @@ export const Image = styled.img`
   height: 50px;
   cursor: pointer;
   animation: ${rotateAnimation} 8s infinite linear;
+  transition: height 0.3s linear, width 0.3s linear;
+
+  &:hover {
+    width: 43px;
+    height: 43px;
+    transition: height 0.3s linear, width 0.3s linear;
+  }
 `;

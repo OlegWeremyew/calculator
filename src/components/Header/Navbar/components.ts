@@ -6,7 +6,7 @@ export const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 150px;
+  width: 160px;
   margin-right: 10px;
   color: ${({ theme }: ThemeType) => theme.color};
 `;

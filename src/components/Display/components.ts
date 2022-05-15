@@ -16,5 +16,6 @@ export const DisplayContainer = styled.div`
 
   @media (max-width: 445px) {
     width: 310px;
+    font-size: 24px;
   }
 `;

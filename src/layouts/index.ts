@@ -43,10 +43,10 @@ export const StyledButton = styled.button`
   align-items: center;
   justify-content: center;
   width: 100px;
-  height: 100px;
+  height: 94px;
   background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   margin: 2px;
-  font-size: 40px;
+  font-size: 50px;
   cursor: pointer;
   color: ${({ theme }: ThemeType) => theme.color};
   border-radius: 5px;

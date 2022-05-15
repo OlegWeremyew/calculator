@@ -5,7 +5,7 @@ import { ThemeType } from '../../../../../types/themeType';
 export const HistoryItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   font-weight: 700;
 `;
 

@@ -3,16 +3,21 @@ import styled from 'styled-components';
 import { ThemeType } from '../../../../types/themeType';
 
 export const StyledButton = styled.button`
-  width: 140px;
+  width: 160px;
   height: 45px;
   background: ${({ theme }: ThemeType) => theme.buttonsBgc};
   cursor: pointer;
-  margin-left: 4px;
+  margin-left: 14px;
   font-size: 13px;
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   border-radius: 5px;
   color: ${({ theme }: ThemeType) => theme.color};
   text-transform: uppercase;
+
+  @media (max-width: 445px) {
+    width: 140px;
+    margin-left: 4px;
+  }
 
   &:first-child {
     margin-left: 0;

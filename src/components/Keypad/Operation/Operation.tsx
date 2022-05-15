@@ -41,15 +41,15 @@ export const Operation: React.FC<OperationPropsType> = memo(
             FIXED_LENGTH,
           );
           dispatch(calculatorAction.changeCurrentValue(current));
-          dispatch(historyAction.addNewHistory(currentValue, current));
+          dispatch(historyAction.addNewHistory(`${currentValue}^2`, current));
         } else if (value === '√') {
           const current = Math.sqrt(eval(currentValue)).toFixed(FIXED_LENGTH);
           dispatch(calculatorAction.changeCurrentValue(current));
-          dispatch(historyAction.addNewHistory(currentValue, current));
+          dispatch(historyAction.addNewHistory(`√${currentValue}`, current));
         } else if (value === '∛') {
           const current = Math.cbrt(eval(currentValue)).toFixed(FIXED_LENGTH);
           dispatch(calculatorAction.changeCurrentValue(current));
-          dispatch(historyAction.addNewHistory(currentValue, current));
+          dispatch(historyAction.addNewHistory(`∛${currentValue}`, current));
         } else if (value === '.') {
           if (
             currentValue.includes('.') &&

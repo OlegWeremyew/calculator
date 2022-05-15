@@ -8,7 +8,7 @@ export const CalculatorContainer = styled.section`
   width: 100%;
   padding: 5px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 835px) {
     flex-direction: column;
     align-items: center;
   }
@@ -19,7 +19,7 @@ export const CalculatorBlock = styled(CalculatorContainer)``;
 export const StyledBlock = styled.article`
   border: ${({ theme }: ThemeType) => theme.border} 3px solid;
   min-width: 200px;
-  height: 712px;
+  height: 675px;
 
   @media (max-width: 445px) {
     height: 533px;
