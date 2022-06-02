@@ -11,6 +11,7 @@ export const LoaderContainer = styled.div`
   height: 100%;
   background: ${({ theme }: ThemeType) => theme.background};
 `;
+
 export const LoaderBlock = styled.div`
   animation: ${rotateAnimation} 5s infinite linear;
   height: 350px;
@@ -21,7 +22,6 @@ export const LoaderBlock = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 250px;
   color: ${({ theme }: ThemeType) => theme.color};
   background: ${({ theme }: ThemeType) => theme.background};
 `;

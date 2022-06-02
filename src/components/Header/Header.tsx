@@ -1,6 +1,5 @@
 import React from 'react';
 
-// @ts-ignore
 import calculator from '../../assets/images/calculator.png';
 import { ReturnComponentType } from '../../types/ReturnComponentType';
 
