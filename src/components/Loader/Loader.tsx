@@ -1,10 +1,8 @@
-import React from 'react';
-
-import { ReturnComponentType } from '../../types/ReturnComponentType';
+import React, { FC } from 'react';
 
 import { LoaderBlock, LoaderContainer } from './components';
 
-export const Loader = (): ReturnComponentType => (
+export const Loader: FC = () => (
   <LoaderContainer>
     <LoaderBlock>⟳</LoaderBlock>
   </LoaderContainer>

@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
 import { PATH } from '../../constants';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { PageContainer, ReturnButton, Title } from './components';
 
-const NotFoundPage = (): ReturnComponentType => {
+const NotFoundPage: FC = () => {
   const navigate = useNavigate();
 
   const returnHomePage = (): void => {

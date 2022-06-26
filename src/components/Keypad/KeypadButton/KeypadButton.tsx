@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { FC, memo } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -7,9 +7,8 @@ import { getButtonsKeypads } from '../../../constants/buttonsValue/buttonsValue'
 import { ButtonContainer, StyledButton } from '../../../layouts';
 import { calculatorAction } from '../../../reducers';
 import { getCurrentValue } from '../../../selectors';
-import { ReturnComponentType } from '../../../types/ReturnComponentType';
 
-export const KeypadButton = memo((): ReturnComponentType => {
+export const KeypadButton: FC = memo(() => {
   const dispatch = useDispatch();
   const buttons = getButtonsKeypads();
 

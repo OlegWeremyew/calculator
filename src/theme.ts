@@ -41,6 +41,7 @@ export const themeHeavenly: DefaultTheme = {
   displayBgc: colors.heavenlyBlack,
   error: colors.error,
 };
+
 export const themeCrimson: DefaultTheme = {
   background: colors.crimson,
   color: colors.black,

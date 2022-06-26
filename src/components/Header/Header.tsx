@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import calculator from '../../assets/images/calculator.png';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { HeaderContainer, Image } from './components';
 import { Navbar } from './Navbar';
 
-export const Header = (): ReturnComponentType => (
+export const Header: FC = () => (
   <HeaderContainer>
     <Image src={calculator} alt="calculator" />
     <Navbar />

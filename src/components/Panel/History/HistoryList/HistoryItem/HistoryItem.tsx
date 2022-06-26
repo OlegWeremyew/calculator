@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { useDispatch } from 'react-redux';
 
 import { historyAction } from '../../../../../reducers';
-import { ReturnComponentType } from '../../../../../types/ReturnComponentType';
 
 import { HistoryButton, HistoryItemContainer } from './components';
 import { HistoryItemType } from './types';
 
-export const HistoryItem: React.FC<HistoryItemType> = ({
-  historyWindow,
-}): ReturnComponentType => {
+export const HistoryItem: FC<HistoryItemType> = ({ historyWindow }) => {
   const dispatch = useDispatch();
 
   const deleteHistoryItem = (ItemID: string): void => {

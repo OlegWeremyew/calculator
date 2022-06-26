@@ -1,11 +1,9 @@
-import React from 'react';
-
-import { ReturnComponentType } from '../../../types/ReturnComponentType';
+import React, { FC } from 'react';
 
 import { HistoryContainer, Title } from './components';
 import { HistoryList } from './HistoryList';
 
-export const History = (): ReturnComponentType => (
+export const History: FC = () => (
   <HistoryContainer>
     <Title>History</Title>
     <HistoryList />

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { FC, useCallback } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -6,9 +6,8 @@ import Settings from '../../components/Settings/Settings';
 import { SettingsContainer } from '../../layouts';
 import { calculatorAction, themeActions } from '../../reducers';
 import { getIsShowControlPanel } from '../../selectors';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
 
-const SettingsPage = (): ReturnComponentType => {
+const SettingsPage: FC = () => {
   const dispatch = useDispatch();
 
   const isShowControlPanel = useSelector(getIsShowControlPanel);

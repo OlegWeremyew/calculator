@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { FC, lazy } from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 
 import { PATH } from '../../constants';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
 
 import { MainContainer } from './components';
 
-const Calculator = React.lazy(() => import('../../pages/CalculatorPage/CalculatorPage'));
-const Settings = React.lazy(() => import('../../pages/SettingsPage/SettingsPage'));
-const PageNotFound = React.lazy(() => import('../../pages/NotFoundPage/NotFoundPage'));
+const Calculator = lazy(() => import('../../pages/CalculatorPage/CalculatorPage'));
+const Settings = lazy(() => import('../../pages/SettingsPage/SettingsPage'));
+const PageNotFound = lazy(() => import('../../pages/NotFoundPage/NotFoundPage'));
 
-export const MainContent = (): ReturnComponentType => (
+export const MainContent: FC = () => (
   <MainContainer>
     <Routes>
       <Route path={PATH.HOME_PAGE_ROUTE} element={<Calculator />} />

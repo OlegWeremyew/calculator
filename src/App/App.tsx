@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
@@ -13,12 +13,12 @@ export const App = (): ReturnComponentType => {
 
   return (
     <ThemeProvider theme={themeStyle}>
-      <React.Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader />}>
         <AppWrapper>
           <Header />
           <MainContent />
         </AppWrapper>
-      </React.Suspense>
+      </Suspense>
     </ThemeProvider>
   );
 };

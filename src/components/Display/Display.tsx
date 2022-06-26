@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-import { ReturnComponentType } from '../../types/ReturnComponentType';
 import { useGetCurrentValueFromLocalStorage } from '../../utils';
 
 import { DisplayContainer } from './components';
 
-export const Display = (): ReturnComponentType => {
+export const Display: FC = () => {
   const currentValue = useGetCurrentValueFromLocalStorage();
 
   return <DisplayContainer>{currentValue || 'lets start 🖩'}</DisplayContainer>;
