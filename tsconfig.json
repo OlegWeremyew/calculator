@@ -2,6 +2,21 @@
   "compilerOptions": {
     "target": "es5",
     "baseUrl": "src",
+    "paths": {
+      "App/*": ["./App/*"],
+      "store/*": ["./store/*"],
+      "globalStyles/*": ["./globalStyles/*"],
+      "components/*": ["./components/*"],
+      "constants/*": ["./constants/*"],
+      "assets/*": ["./assets/*"],
+      "pages/*": ["./pages/*"],
+      "layouts/*": ["./layouts/*"],
+      "types/*": ["./types/*"],
+      "utils/*": ["./utils/*"],
+      "reducers/*": ["./reducers/*"],
+      "selectors/*": ["./selectors/*"],
+      "theme/*": ["./theme/*"],
+    },
     "lib": [
       "dom",
       "dom.iterable",

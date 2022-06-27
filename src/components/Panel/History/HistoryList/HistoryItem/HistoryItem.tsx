@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 
 import { useDispatch } from 'react-redux';
 
-import { historyAction } from '../../../../../reducers';
-
 import { HistoryButton, HistoryItemContainer } from './components';
 import { HistoryItemType } from './types';
+
+import { historyAction } from 'reducers';
 
 export const HistoryItem: FC<HistoryItemType> = ({ historyWindow }) => {
   const dispatch = useDispatch();

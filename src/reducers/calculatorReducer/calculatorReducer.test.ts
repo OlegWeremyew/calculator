@@ -1,8 +1,8 @@
-import { EMPTY_STRING } from '../../constants';
-
 import { calculatorAction } from './calculatorAction';
 import { calculatorReducer } from './calculatorReducer';
 import { CalculatorInitialValueType } from './types';
+
+import { EMPTY_STRING } from 'constants/variables';
 
 const startState: CalculatorInitialValueType = {
   currentValue: EMPTY_STRING,

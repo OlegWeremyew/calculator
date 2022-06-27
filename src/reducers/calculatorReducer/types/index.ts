@@ -1,5 +1,6 @@
-import { InferActionTypes } from '../../../store';
 import { calculatorAction } from '../calculatorAction';
+
+import { InferActionTypes } from 'store';
 
 export type CalculatorInitialValueType = {
   currentValue: string;

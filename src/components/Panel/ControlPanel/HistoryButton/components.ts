@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ThemeType } from '../../../../types/themeType';
+import { ThemeType } from 'types/themeType';
 
 export const StyledButton = styled.button`
   width: 165px;

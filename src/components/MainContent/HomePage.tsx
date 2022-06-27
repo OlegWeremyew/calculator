@@ -2,13 +2,13 @@ import React, { FC, lazy } from 'react';
 
 import { Routes, Route } from 'react-router-dom';
 
-import { PATH } from '../../constants';
-
 import { MainContainer } from './components';
 
-const Calculator = lazy(() => import('../../pages/CalculatorPage/CalculatorPage'));
-const Settings = lazy(() => import('../../pages/SettingsPage/SettingsPage'));
-const PageNotFound = lazy(() => import('../../pages/NotFoundPage/NotFoundPage'));
+import { PATH } from 'constants/router';
+
+const Calculator = lazy(() => import('pages/CalculatorPage/CalculatorPage'));
+const Settings = lazy(() => import('pages/SettingsPage/SettingsPage'));
+const PageNotFound = lazy(() => import('pages/NotFoundPage/NotFoundPage'));
 
 export const MainContent: FC = () => (
   <MainContainer>

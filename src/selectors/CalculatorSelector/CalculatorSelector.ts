@@ -1,4 +1,4 @@
-import { AppRootStateType } from '../../store';
+import { AppRootStateType } from 'store';
 
 export const getCurrentValue = (state: AppRootStateType): string =>
   state.calculator.currentValue;

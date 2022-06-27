@@ -2,11 +2,11 @@ import React, { Suspense } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 
-import { Header, Loader, MainContent } from '../components';
-import { ReturnComponentType } from '../types/ReturnComponentType';
-import { useGetTheme } from '../utils';
-
 import { AppWrapper } from './components';
+
+import { Header, Loader, MainContent } from 'components';
+import { ReturnComponentType } from 'types/ReturnComponentType';
+import { useGetTheme } from 'utils';
 
 export const App = (): ReturnComponentType => {
   const themeStyle = useGetTheme();

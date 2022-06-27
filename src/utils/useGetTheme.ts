@@ -2,16 +2,16 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { themeActions } from '../reducers';
-import { getThemeValue } from '../selectors';
+import { themeActions } from 'reducers';
+import { getThemeValue } from 'selectors';
 import {
   themeCrimson,
   themeDark,
   themeHeavenly,
   themeLight,
   themeLightBrown,
-} from '../theme';
-import { ThemeObjectType } from '../types/themeType';
+} from 'theme';
+import { ThemeObjectType } from 'types/themeType';
 
 export const useGetTheme = (): ThemeObjectType => {
   const dispatch = useDispatch();

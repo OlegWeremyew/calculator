@@ -2,10 +2,10 @@ import React, { FC, useCallback } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import Settings from '../../components/Settings/Settings';
-import { SettingsContainer } from '../../layouts';
-import { calculatorAction, themeActions } from '../../reducers';
-import { getIsShowControlPanel } from '../../selectors';
+import Settings from 'components/Settings/Settings';
+import { SettingsContainer } from 'layouts';
+import { calculatorAction, themeActions } from 'reducers';
+import { getIsShowControlPanel } from 'selectors';
 
 const SettingsPage: FC = () => {
   const dispatch = useDispatch();

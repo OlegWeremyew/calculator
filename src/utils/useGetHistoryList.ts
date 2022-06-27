@@ -2,9 +2,9 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { historyAction } from '../reducers';
-import { HistoryType } from '../reducers/historyReducer/types';
-import { getHistory } from '../selectors';
+import { historyAction } from 'reducers';
+import { HistoryType } from 'reducers/historyReducer/types';
+import { getHistory } from 'selectors';
 
 export const useGetHistoryList = (): HistoryType[] => {
   const dispatch = useDispatch();

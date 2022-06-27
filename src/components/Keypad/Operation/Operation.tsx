@@ -2,17 +2,17 @@ import React, { FC, memo, useCallback } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { Operand } from './Operand';
+import { OperationPropsType } from './types';
+
 import {
   FIXED_LENGTH,
   NUMBER_ONE,
   TIME_OUT_VALUE,
   ZERO_NUMBER,
-} from '../../../constants';
-import { calculatorAction, historyAction } from '../../../reducers';
-import { getCurrentValue } from '../../../selectors';
-
-import { Operand } from './Operand';
-import { OperationPropsType } from './types';
+} from 'constants/variables';
+import { calculatorAction, historyAction } from 'reducers';
+import { getCurrentValue } from 'selectors';
 
 export const Operation: FC<OperationPropsType> = memo(({ operationsList }) => {
   const dispatch = useDispatch();

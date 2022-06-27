@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
 
-import { useGetHistoryList } from '../../../../utils';
-
 import { HistoryListContainer, Text, Title } from './components';
 import { HistoryItem } from './HistoryItem';
+
+import { useGetHistoryList } from 'utils';
 
 export const HistoryList: FC = () => {
   const historyWindow = useGetHistoryList();

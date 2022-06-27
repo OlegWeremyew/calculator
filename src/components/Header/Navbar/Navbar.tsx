@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 
 import { NavLink } from 'react-router-dom';
 
-import { PATH } from '../../../constants';
-
 import { NavbarContainer } from './components';
+
+import { PATH } from 'constants/router';
 
 export const Navbar: FC = () => (
   <NavbarContainer>

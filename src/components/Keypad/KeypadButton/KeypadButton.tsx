@@ -2,11 +2,11 @@ import React, { FC, memo } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { NUMBER_ONE, NUMBER_TWO } from '../../../constants';
-import { getButtonsKeypads } from '../../../constants/buttonsValue/buttonsValue';
-import { ButtonContainer, StyledButton } from '../../../layouts';
-import { calculatorAction } from '../../../reducers';
-import { getCurrentValue } from '../../../selectors';
+import { getButtonsKeypads } from 'constants/buttonsValue/buttonsValue';
+import { NUMBER_ONE, NUMBER_TWO } from 'constants/variables';
+import { ButtonContainer, StyledButton } from 'layouts';
+import { calculatorAction } from 'reducers';
+import { getCurrentValue } from 'selectors';
 
 export const KeypadButton: FC = memo(() => {
   const dispatch = useDispatch();

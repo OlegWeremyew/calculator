@@ -2,12 +2,12 @@ import React, { FC } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Container } from '../../../layouts';
-import { historyAction } from '../../../reducers';
-import { getIsShowHistoryValue } from '../../../selectors';
-
 import { HistoryContainer, Title } from './components';
 import { HistoryButton } from './HistoryButton';
+
+import { Container } from 'layouts';
+import { historyAction } from 'reducers';
+import { getIsShowHistoryValue } from 'selectors';
 
 export const ControlPanel: FC = () => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { rotateAnimation } from '../../layouts';
-import { ThemeType } from '../../types/themeType';
+import { rotateAnimation } from 'layouts';
+import { ThemeType } from 'types/themeType';
 
 export const LoaderContainer = styled.div`
   display: flex;

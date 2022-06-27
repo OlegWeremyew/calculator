@@ -1,4 +1,4 @@
-import { MainThemeType } from '../reducers/themeReducer/types';
+import { MainThemeType } from 'reducers/themeReducer/types';
 
 export const themes: MainThemeType[] = [
   'light',

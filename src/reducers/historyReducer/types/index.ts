@@ -1,6 +1,7 @@
-import { InferActionTypes } from '../../../store';
 import { historyAction } from '../historyAction';
 import { HistoryInitialValue } from '../historyReducer';
+
+import { InferActionTypes } from 'store';
 
 export type ActionHistoryTypes = InferActionTypes<typeof historyAction>;
 

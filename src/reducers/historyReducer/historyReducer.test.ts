@@ -1,8 +1,8 @@
-import { EMPTY_ARRAY, FIRST_ELEMENT_IN_ARRAY, ZERO_NUMBER } from '../../constants';
-
 import { historyAction } from './historyAction';
 import { historyReducer } from './historyReducer';
 import { HistoryInitialValueType, HistoryType } from './types';
+
+import { EMPTY_ARRAY, FIRST_ELEMENT_IN_ARRAY, ZERO_NUMBER } from 'constants/variables';
 
 const startState: HistoryInitialValueType = {
   historyWindow: [

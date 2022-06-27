@@ -1,10 +1,11 @@
 import React from 'react';
 
-import { Settings } from '../../../components/Settings';
-import { ReturnComponentType } from '../../../types/ReturnComponentType';
 import { SettingsPropsType } from '../types';
 
 import { Container, Title } from './components';
+
+import { Settings } from 'components/Settings';
+import { ReturnComponentType } from 'types/ReturnComponentType';
 
 export class SettingsClassComponent extends React.Component<SettingsPropsType> {
   render(): ReturnComponentType {

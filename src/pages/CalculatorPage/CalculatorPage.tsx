@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 
 import { useSelector } from 'react-redux';
 
-import { Display, Keypad, Panel } from '../../components';
-import { getIsShowControlPanel } from '../../selectors';
-
 import { CalculatorBlock, CalculatorContainer, StyledBlock } from './components';
+
+import { Display, Keypad, Panel } from 'components';
+import { getIsShowControlPanel } from 'selectors';
 
 const CalculatorPage: FC = () => {
   const isShowControlPanel = useSelector(getIsShowControlPanel);

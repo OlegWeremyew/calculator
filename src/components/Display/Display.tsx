@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
-import { useGetCurrentValueFromLocalStorage } from '../../utils';
-
 import { DisplayContainer } from './components';
+
+import { useGetCurrentValueFromLocalStorage } from 'utils';
 
 export const Display: FC = () => {
   const currentValue = useGetCurrentValueFromLocalStorage();

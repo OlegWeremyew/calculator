@@ -1,8 +1,8 @@
 import React, { FC, memo } from 'react';
 
-import { ButtonContainer, StyledButton } from '../../../../layouts';
-
 import { OperationType } from './types';
+
+import { ButtonContainer, StyledButton } from 'layouts';
 
 export const Operand: FC<OperationType> = memo(({ createOperation, operationsList }) => (
   <ButtonContainer>

@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
-import { PATH } from '../../constants';
-
 import { PageContainer, ReturnButton, Title } from './components';
+
+import { PATH } from 'constants/router';
 
 const NotFoundPage: FC = () => {
   const navigate = useNavigate();

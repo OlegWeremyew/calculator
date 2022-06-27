@@ -1,12 +1,12 @@
 import React, { memo } from 'react';
 
-import { SettingsContainer } from '../../layouts';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
-
 import { Title } from './components';
 import { SettingsButton } from './SettingsButton';
 import { SwitchTheme } from './SwitchTheme';
 import { SettingsPropsType } from './types';
+
+import { SettingsContainer } from 'layouts';
+import { ReturnComponentType } from 'types/ReturnComponentType';
 
 export const Settings = memo(
   ({

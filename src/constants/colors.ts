@@ -1,4 +1,4 @@
-import { ColorsType } from '../types/colorsType';
+import { ColorsType } from 'types/colorsType';
 
 export const colors: ColorsType = {
   black: '#1e1d1d',

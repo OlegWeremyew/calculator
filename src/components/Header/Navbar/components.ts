@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ThemeType } from '../../../types/themeType';
+import { ThemeType } from 'types/themeType';
 
 export const NavbarContainer = styled.nav`
   display: flex;

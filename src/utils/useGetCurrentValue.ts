@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { calculatorAction } from '../reducers';
-import { getCurrentValue } from '../selectors';
+import { calculatorAction } from 'reducers';
+import { getCurrentValue } from 'selectors';
 
 export const useGetCurrentValueFromLocalStorage = (): string => {
   const dispatch = useDispatch();

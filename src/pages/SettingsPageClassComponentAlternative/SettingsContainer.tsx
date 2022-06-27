@@ -3,13 +3,13 @@ import React, { ComponentType } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import { calculatorAction, themeActions } from '../../reducers';
-import { getIsShowControlPanel } from '../../selectors';
-import { AppRootStateType } from '../../store';
-import { ReturnComponentType } from '../../types/ReturnComponentType';
-
 import { SettingsClassComponent } from './SettingsClassComponent';
 import { MapDispatchToPropsType, MapStateToPropsType, SettingsPropsType } from './types';
+
+import { calculatorAction, themeActions } from 'reducers';
+import { getIsShowControlPanel } from 'selectors';
+import { AppRootStateType } from 'store';
+import { ReturnComponentType } from 'types/ReturnComponentType';
 
 export class SettingsClassComponentWrapper extends React.Component<SettingsPropsType> {
   render(): ReturnComponentType {
